@@ -1,7 +1,7 @@
 import os
 import sqlite3
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional
 from contextlib import contextmanager
 
@@ -618,13 +618,14 @@ def get_all_users_full_profile() -> list:
     return result
 
 def was_notified_recently(user_id: str, scheme_name: str, days: int = 30) -> bool:
+    cutoff_date = datetime.now() - timedelta(days=days)
     with get_cursor() as c:
         if USE_POSTGRES:
             c.execute('''
                 SELECT 1 FROM notifications 
                 WHERE user_id = %s AND scheme_name = %s
-                AND created_at > NOW() - INTERVAL '%s days'
-            ''', (user_id, scheme_name, str(days)))
+                AND created_at > %s
+            ''', (user_id, scheme_name, cutoff_date))
         else:
             c.execute('''
                 SELECT 1 FROM notifications 
