@@ -39,24 +39,60 @@ class LLMProvider:
     
     def _setup_providers(self):
         """Initialize both LLM providers"""
+        logger.info("=== LLM Provider Diagnostics ===")
+        logger.info(f"GEMINI_API_KEY present: {bool(self.gemini_key)}")
+        logger.info(f"GROQ_API_KEY present: {bool(self.groq_key)}")
+        logger.info(f"GEMINI_API_KEY length: {len(self.gemini_key) if self.gemini_key else 0}")
+        logger.info(f"GROQ_API_KEY length: {len(self.groq_key) if self.groq_key else 0}")
+        
+        if self.gemini_key:
+            logger.info(f"GEMINI_API_KEY prefix: {self.gemini_key[:10]}...")
+        else:
+            logger.warning("GEMINI_API_KEY is EMPTY or None")
+            
+        if self.groq_key:
+            logger.info(f"GROQ_API_KEY prefix: {self.groq_key[:10]}...")
+        else:
+            logger.warning("GROQ_API_KEY is EMPTY or None")
+        
         # Setup Gemini
+        if GEMINI_AVAILABLE:
+            logger.info(f"GEMINI_AVAILABLE package: True")
+        else:
+            logger.warning("GEMINI_AVAILABLE package: False")
+        
         if GEMINI_AVAILABLE and self.gemini_key:
             try:
                 genai.configure(api_key=self.gemini_key)
                 self._gemini_configured = True
-                logger.info("Gemini configured successfully")
+                logger.info("✓ Gemini configured successfully")
             except Exception as e:
-                logger.warning(f"Gemini configuration failed: {e}")
+                logger.warning(f"✗ Gemini configuration failed: {e}")
+        else:
+            if not GEMINI_AVAILABLE:
+                logger.warning("✗ Gemini skipped: package not available")
+            if not self.gemini_key:
+                logger.warning("✗ Gemini skipped: GEMINI_API_KEY is empty")
         
         # Setup Groq
+        if GROQ_AVAILABLE:
+            logger.info(f"GROQ_AVAILABLE package: True")
+        else:
+            logger.warning("GROQ_AVAILABLE package: False")
+        
         if GROQ_AVAILABLE and self.groq_key and self.groq_key != 'gsk_your_groq_api_key_here':
             try:
                 self._groq_client = Groq(api_key=self.groq_key)
-                logger.info("Groq configured successfully")
+                logger.info("✓ Groq configured successfully")
             except Exception as e:
-                logger.warning(f"Groq configuration failed: {e}")
+                logger.warning(f"✗ Groq configuration failed: {e}")
         else:
-            logger.info("Groq not configured - set GROQ_API_KEY in .env")
+            if not GROQ_AVAILABLE:
+                logger.warning("✗ Groq skipped: package not available")
+            elif not self.groq_key:
+                logger.warning("✗ Groq skipped: GROQ_API_KEY is empty")
+            elif self.groq_key == 'gsk_your_groq_api_key_here':
+                logger.warning("✗ Groq skipped: placeholder key detected")
     
     def generate(self, prompt: str, language: str = 'english', **kwargs) -> str:
         """
@@ -72,6 +108,10 @@ class LLMProvider:
         Raises:
             Exception: If both providers fail
         """
+        logger.info("=== Generate Request ===")
+        logger.info(f"Gemini configured: {self._gemini_configured}")
+        logger.info(f"Groq client available: {bool(self._groq_client)}")
+        
         # Try Gemini first
         if self._gemini_configured:
             try:
