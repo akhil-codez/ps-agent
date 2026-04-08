@@ -29,19 +29,18 @@ def get_sqlite_connection():
     return conn
 
 def get_pg_connection():
-    """Get PostgreSQL connection (for production)"""
+    """Get PostgreSQL connection (for production) with RealDictCursor"""
     global _pg_conn
     if _pg_conn is None:
         import psycopg2
-        _pg_conn = psycopg2.connect(DATABASE_URL)
+        from psycopg2.extras import RealDictCursor
+        _pg_conn = psycopg2.connect(DATABASE_URL, cursor_factory=RealDictCursor)
     return _pg_conn
 
 def get_pg_cursor():
-    """Get PostgreSQL cursor with dict-like row factory"""
+    """Get PostgreSQL cursor with RealDictCursor"""
     conn = get_pg_connection()
-    cur = conn.cursor()
-    cur.row_factory = lambda c, r: {desc[0]: r[i] for i, desc in enumerate(c.description)}
-    return cur
+    return conn.cursor()
 
 @contextmanager
 def get_cursor():
@@ -49,7 +48,6 @@ def get_cursor():
     if USE_POSTGRES:
         conn = get_pg_connection()
         cur = conn.cursor()
-        cur.row_factory = lambda c, r: {desc[0]: r[i] for i, desc in enumerate(c.description)}
         try:
             yield cur
             conn.commit()
@@ -165,7 +163,9 @@ def init_sqlite_db():
 
 def init_postgres_db():
     """Initialize PostgreSQL database"""
-    conn = get_pg_connection()
+    import psycopg2
+    from psycopg2.extras import RealDictCursor
+    conn = psycopg2.connect(DATABASE_URL)
     cur = conn.cursor()
     
     # Users table
