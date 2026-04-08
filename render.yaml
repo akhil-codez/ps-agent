@@ -1,8 +1,5 @@
 # Render Blueprint - Panchayat Seva Agent
-# https://render.com/docs/blueprint-spec
-
 services:
-  # Main API Service
   - type: web
     name: ps-agent-api
     env: python
@@ -11,49 +8,6 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
-    envVars:
-      - key: DATABASE_URL
-        sync: false
-      - key: GEMINI_API_KEY
-        sync: false
-      - key: GROQ_API_KEY
-        sync: false
-      - key: SERPER_API_KEY
-        sync: false
-      - key: TWILIO_ACCOUNT_SID
-        sync: false
-      - key: TWILIO_AUTH_TOKEN
-        sync: false
-      - key: TWILIO_WHATSAPP_FROM
-        sync: false
-
-# Cron Jobs - Run twice daily (8 AM & 3:15 PM IST)
-# IST = UTC+5:30, so 8 AM IST = 2:30 UTC, 3:15 PM IST = 9:45 UTC
-cron:
-  - name: morning-notifications
-    schedule: "30 2 * * *"
-    command: python notification_scheduler.py
-    maxRetries: 3
-    envVars:
-      - key: DATABASE_URL
-        sync: false
-      - key: GEMINI_API_KEY
-        sync: false
-      - key: GROQ_API_KEY
-        sync: false
-      - key: SERPER_API_KEY
-        sync: false
-      - key: TWILIO_ACCOUNT_SID
-        sync: false
-      - key: TWILIO_AUTH_TOKEN
-        sync: false
-      - key: TWILIO_WHATSAPP_FROM
-        sync: false
-
-  - name: afternoon-notifications
-    schedule: "45 9 * * *"
-    command: python notification_scheduler.py
-    maxRetries: 3
     envVars:
       - key: DATABASE_URL
         sync: false
