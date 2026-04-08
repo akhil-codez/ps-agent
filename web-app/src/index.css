@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Malayalam:wght@400;500&family=Syne:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Transition durations */
+  --theme-transition: 300ms ease;
+  --hover-transition: 200ms ease;
+}
+
+[data-theme="dark"] {
+  --bg-base: #050e07;
+  --bg-surface: rgba(255, 255, 255, 0.04);
+  --bg-panel: #081408;
+  --border-default: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --text-primary: #f0f0ee;
+  --text-secondary: rgba(240, 240, 238, 0.7);
+  --text-muted: rgba(240, 240, 238, 0.4);
+  --green-brand: #0a5635;
+  --green-accent: #22c55e;
+  --green-soft: rgba(10, 86, 53, 0.3);
+  --gold-alert: #c9820a;
+  --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glass-blur: blur(20px);
+}
+
+[data-theme="light"] {
+  --bg-base: #f4f9f5;
+  --bg-surface: rgba(255, 255, 255, 0.85);
+  --bg-panel: #ffffff;
+  --border-default: rgba(10, 86, 53, 0.12);
+  --border-subtle: rgba(10, 86, 53, 0.06);
+  --text-primary: #0d1f10;
+  --text-secondary: rgba(13, 31, 16, 0.7);
+  --text-muted: rgba(13, 31, 16, 0.5);
+  --green-brand: #0a5635;
+  --green-accent: #22c55e;
+  --green-soft: rgba(10, 86, 53, 0.1);
+  --gold-alert: #c9820a;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(10, 86, 53, 0.08);
+  --glass-blur: blur(16px);
+}
+
+body {
+  @apply bg-base text-primary font-body antialiased;
+  transition: background-color var(--theme-transition), color var(--theme-transition);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--shadow-card);
+}
+
+* {
+  transition: border-color var(--hover-transition), box-shadow var(--hover-transition);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-full;
+  background-color: var(--green-brand);
+  opacity: 0.3;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--green-brand);
+  opacity: 0.6;
+}

@@ -1,0 +1,3083 @@
+{
+  "bpl_ration_card": {
+    "name": "BPL Ration Card",
+    "description": "Priority ration card for families below poverty line with subsidized food grains",
+    "benefit": "Free/subsidized rice, wheat, sugar, kerosene. Approximately ₹200-500/month value",
+    "conditions": {
+      "annual_income_max": 100000,
+      "kerala_resident": true,
+      "has_aadhaar": true
+    },
+    "disqualifiers": [
+      "has_apl_card",
+      "income_above_100000",
+      "has_pucca_house",
+      "has_vehicle_above_4_lakh",
+      "owns_4_wheeler"
+    ],
+    "documents_needed": [
+      "Income certificate",
+      "BPL certificate",
+      "Aadhaar of all family members",
+      "Bank passbook",
+      "Recent passport photos"
+    ],
+    "application_portal": "Civil Supplies Office / ecitizen.gov.in",
+    "deadline": "Ongoing scheme",
+    "missing_field_questions": {
+      "has_pucca_house": {
+        "question_en": "Do you own a pucca house (permanent concrete house)?",
+        "question_ml": "നിങ്ങൾക്ക് ഒരു പൂർണ്ണ വീടുണ്ടോ (സ്ഥിരമായ കോൺക്രീറ്റ് വീട്)?",
+        "context_en": "This scheme is for those without a permanent house.",
+        "context_ml": "ഈ സ്കീം സ്ഥിരമായ വീടില്ലാത്തവർക്കാണ്.",
+        "input_type": "yesno"
+      },
+      "has_vehicle_above_4_lakh": {
+        "question_en": "Do you own a vehicle worth more than ₹4 lakhs?",
+        "question_ml": "നിങ്ങൾക്ക് 4 ലക്ഷിക്കു മുകളിൽ വിലയുള്ള വാഹനമുണ്ടോ?",
+        "context_en": "Applicant should not own expensive vehicles.",
+        "context_ml": "ചെയറായ വാഹനങ്ങൾ ഉണ്ടാകരുത്.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "pm_awas_yojana_gramin": {
+    "name": "PM Awas Yojana Gramin",
+    "description": "Housing grant for rural families without pucca house",
+    "benefit": "₹1.20 lakh in plain areas, ₹1.30 lakh in hilly areas",
+    "conditions": {
+      "annual_income_max": 300000,
+      "has_pucca_house": false,
+      "kerala_resident": true,
+      "age_min": 18
+    },
+    "disqualifiers": [
+      "has_pucca_house",
+      "income_above_300000",
+      "owns_4_wheeler",
+      "government_employee"
+    ],
+    "documents_needed": [
+      "Aadhaar",
+      "Income certificate",
+      "Bank account",
+      "Land documents",
+      "SECC 2011 data verification"
+    ],
+    "application_portal": "pmayg.nic.in",
+    "deadline": "Ongoing scheme",
+    "missing_field_questions": {
+      "has_pucca_house": {
+        "question_en": "Do you own a pucca house (permanent concrete house)?",
+        "question_ml": "നിങ്ങൾക്ക് ഒരു പൂർണ്ണ വീടുണ്ടോ (സ്ഥിരമായ കോൺക്രീറ്റ് വീട്)?",
+        "context_en": "This scheme is only for those who don't own a permanent house.",
+        "context_ml": "ഈ സ്കീം സ്ഥിരമായ വീടില്ലാത്തവർക്കാണ്.",
+        "input_type": "yesno"
+      },
+      "owns_4_wheeler": {
+        "question_en": "Do you own a 4-wheeler vehicle (car/jeep)?",
+        "question_ml": "നിങ്ങൾക്ക് ഒരു 4 ചക്ര വാഹനമുണ്ടോ (കാർ/ജീപ്പ്)?",
+        "context_en": "Applicant should not own a 4-wheeler vehicle.",
+        "context_ml": "4 ചക്ര വാഹനം ഉണ്ടാകരുത്.",
+        "input_type": "yesno"
+      },
+      "government_employee": {
+        "question_en": "Is any member in your family a government employee?",
+        "question_ml": "നിങ്ങളുടെ കുടുംബത്തിൽ സർക്കാർ ജീപ്പോയുണ്ടോ?",
+        "context_en": "Government employees and their families are not eligible.",
+        "context_ml": "സർക്കാർ ജീപ്പുകാരും കുടുംബവും അർഹരല്ല.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "karunya_health": {
+    "name": "Karunya Health Scheme",
+    "description": "Cashless medical treatment for below poverty line families",
+    "benefit": "Up to ₹3 lakh coverage per year for specified diseases",
+    "conditions": {
+      "annual_income_max": 300000,
+      "has_bpl_card": true,
+      "kerala_resident": true
+    },
+    "disqualifiers": [
+      "has_private_insurance",
+      "income_above_300000",
+      "non_kerala_resident"
+    ],
+    "documents_needed": [
+      "BPL certificate",
+      "Aadhaar",
+      "Income certificate",
+      "Bank account",
+      "Medical records"
+    ],
+    "application_portal": "karunya.kerala.gov.in",
+    "deadline": "Ongoing scheme",
+    "missing_field_questions": {
+      "has_private_insurance": {
+        "question_en": "Do you have any private health insurance?",
+        "question_ml": "നിങ്ങൾക്ക് സ്വകാര്യ ആരോഗ്യ ഇൻഷുറൻസുണ്ടോ?",
+        "context_en": "Those with private health insurance are not eligible.",
+        "context_ml": "സ്വകാര്യ ആരോഗ്യ ഇൻഷുറൻസുള്ളവർ അർഹരല്ല.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "old_age_pension": {
+    "name": "Indira Gandhi National Old Age Pension",
+    "description": "Monthly pension for senior citizens below poverty line",
+    "benefit": "₹200-500/month (central) + ₹200-600 state top-up",
+    "conditions": {
+      "age_min": 60,
+      "annual_income_max": 100000,
+      "kerala_resident": true
+    },
+    "disqualifiers": [
+      "receives_other_pension",
+      "income_above_100000",
+      "age_below_60"
+    ],
+    "documents_needed": [
+      "Aadhaar",
+      "Age proof",
+      "Income certificate",
+      "Bank account",
+      "Passbook copy"
+    ],
+    "application_portal": "sneha.socialjustice.kerala.gov.in",
+    "deadline": "Ongoing scheme",
+    "missing_field_questions": {
+      "receives_other_pension": {
+        "question_en": "Do you currently receive any other pension?",
+        "question_ml": "നിങ്ങൾ ഇപ്പോൾ മറ്റേതെങ്കിലം പെൻഷൻ ലഭിക്കുന്നുണ്ടോ?",
+        "context_en": "This scheme is only for those not receiving other pensions.",
+        "context_ml": "ഈ സ്കീം മറ്റ് പെൻഷൻ ലഭിക്കാത്തവർക്കാണ്.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "widow_pension": {
+    "name": "Widow Pension Scheme",
+    "description": "Financial assistance for widowed women",
+    "benefit": "₹500-1000/month",
+    "conditions": {
+      "is_widowed": true,
+      "annual_income_max": 100000,
+      "kerala_resident": true
+    },
+    "disqualifiers": [
+      "remarried",
+      "income_above_100000",
+      "receives_other_pension",
+      "owns_4_wheeler"
+    ],
+    "documents_needed": [
+      "Death certificate of husband",
+      "Widow certificate",
+      "Aadhaar",
+      "Income certificate",
+      "Bank account"
+    ],
+    "application_portal": "sneha.socialjustice.kerala.gov.in",
+    "deadline": "Ongoing scheme",
+    "missing_field_questions": {
+      "remarried": {
+        "question_en": "Have you remarried after being widowed?",
+        "question_ml": "ഭർത്താവിന്റെ മരണശേഷം വിവാഹം കഴിച്ചുവോ?",
+        "context_en": "Those who have remarried are not eligible.",
+        "context_ml": "വിവാഹം കഴിച്ചവർ അർഹരല്ല.",
+        "input_type": "yesno"
+      },
+      "receives_other_pension": {
+        "question_en": "Do you currently receive any other pension?",
+        "question_ml": "നിങ്ങൾ ഇപ്പോൾ മറ്റേതെങ്കിലം പെൻഷൻ ലഭിക്കുന്നുണ്ടോ?",
+        "context_en": "This scheme is only for those not receiving other pensions.",
+        "context_ml": "ഈ സ്കീം മറ്റ് പെൻഷൻ ലഭിക്കാത്തവർക്കാണ്.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "disability_pension": {
+    "name": "Disability Pension",
+    "description": "Monthly pension for persons with disabilities",
+    "benefit": "₹500-1200/month",
+    "conditions": {
+      "has_disability_cert": true,
+      "disability_percentage_min": 40,
+      "annual_income_max": 100000,
+      "kerala_resident": true
+    },
+    "disqualifiers": [
+      "income_above_100000",
+      "receives_other_pension"
+    ],
+    "documents_needed": [
+      "Disability certificate",
+      "Aadhaar",
+      "Income certificate",
+      "Bank account",
+      "Photo"
+    ],
+    "application_portal": "sneha.socialjustice.kerala.gov.in",
+    "deadline": "Ongoing scheme",
+    "missing_field_questions": {
+      "has_disability_cert": {
+        "question_en": "Do you have a valid disability certificate?",
+        "question_ml": "നിങ്ങൾക്ക് സാധുവായ വൈകല്യ സർട്ടിഫിക്കറ്റുണ്ടോ?",
+        "context_en": "A valid disability certificate from medical authority is required.",
+        "context_ml": "വൈദ്യസംബന്ധം അതോറിറ്റിയിൽ നിന്നുള്ള സർട്ടിഫിക്കറ്റ് ആവശ്യമാണ്.",
+        "input_type": "yesno"
+      },
+      "disability_percentage": {
+        "question_en": "What is your disability percentage? (Please enter a number between 0-100)",
+        "question_ml": "നിങ്ങളുടെ വൈകല്യ ശതമാനം എത്രയാണ്? (0-100 നും ഇടയിൽ ഒരു സംഖ്യ നൽകുക)",
+        "context_en": "Minimum 40% disability is required for this scheme.",
+        "context_ml": "ഈ സ്കീമിന് കുറഞ്ഞത് 40% വൈകല്യം ആവശ്യമാണ്.",
+        "input_type": "number"
+      },
+      "receives_other_pension": {
+        "question_en": "Do you currently receive any other pension?",
+        "question_ml": "നിങ്ങൾ ഇപ്പോൾ മറ്റേതെങ്കിലം പെൻഷൻ ലഭിക്കുന്നുണ്ടോ?",
+        "context_en": "This scheme is only for those not receiving other pensions.",
+        "context_ml": "ഈ സ്കീം മറ്റ് പെൻഷൻ ലഭിക്കാത്തവർക്കാണ്.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "karunya_suraksha": {
+    "name": "Karunya Suraksha Insurance",
+    "description": "Health insurance coverage for APL families",
+    "benefit": "Up to ₹2 lakh coverage for critical illnesses",
+    "conditions": {
+      "annual_income_max": 500000,
+      "kerala_resident": true,
+      "has_family": true
+    },
+    "disqualifiers": [
+      "has_private_insurance",
+      "income_above_500000",
+      "non_kerala_resident"
+    ],
+    "documents_needed": [
+      "Income certificate",
+      "Aadhaar",
+      "Family details",
+      "Bank account"
+    ],
+    "application_portal": "karunya.kerala.gov.in",
+    "deadline": "Ongoing scheme",
+    "missing_field_questions": {
+      "has_private_insurance": {
+        "question_en": "Do you have any private health insurance?",
+        "question_ml": "നിങ്ങൾക്ക് സ്വകാര്യ ആരോഗ്യ ഇൻഷുറൻസുണ്ടോ?",
+        "context_en": "Those with private health insurance are not eligible.",
+        "context_ml": "സ്വകാര്യ ആരോഗ്യ ഇൻഷുറൻസുള്ളവർ അർഹരല്ല.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "pm_vishwakarma": {
+    "name": "PM Vishwakarma Yojana",
+    "description": "Skill and capital support for traditional artisans",
+    "benefit": "₹15,000 skill training + ₹1 lakh credit support + ₹300/month stipend",
+    "conditions": {
+      "age_min": 18,
+      "is_artisan": true,
+      "annual_income_max": 300000,
+      "kerala_resident": true
+    },
+    "disqualifiers": [
+      "income_above_300000",
+      "has_other_govt_scheme",
+      "not_artisan"
+    ],
+    "documents_needed": [
+      "Aadhaar",
+      "Skill certificate if any",
+      "Bank account",
+      "Address proof",
+      "Passport photos"
+    ],
+    "application_portal": "pmvishwakarma.gov.in",
+    "deadline": "Ongoing scheme",
+    "missing_field_questions": {
+      "is_artisan": {
+        "question_en": "Are you a traditional artisan (carpenter, blacksmith, cobbler, weaver, potter, etc.)?",
+        "question_ml": "നിങ്ങൾ ഒരു തനതരകനാണോ (ആശാദിയായി, ഇരുമ്പാക്ക, മൃഗത്തോൽ, നെയ്ത്തുകാരൻ, മൺപാത്രക്കാരൻ തുടങ്ങിയവർ)?",
+        "context_en": "This scheme is only for traditional artisans.",
+        "context_ml": "ഈ സ്കീം തനതരകന്മാർക്ക് മാത്രമാണ്.",
+        "input_type": "yesno"
+      },
+      "has_other_govt_scheme": {
+        "question_en": "Are you already receiving benefits from any other government scheme?",
+        "question_ml": "നിങ്ങൾ ഇതിനകം മറ്റേതെങ്കിലം സർക്കാർ സ്കീമിൽ നിന്ന് ഗുണങ്ങൾ ലഭിക്കുന്നുണ്ടോ?",
+        "context_en": "Those already in other govt schemes may not be eligible.",
+        "context_ml": "മറ്റ് സർക്കാർ സ്കീമുകളിൽ ഉള്ളവർക്ക് അർഹതയില്ല.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "mgnrega": {
+    "name": "MGNREGA Job Card",
+    "description": "100 days guaranteed wage employment for rural households",
+    "benefit": "₹280-350/day wages + work guarantee within 15 days",
+    "conditions": {
+      "age_min": 18,
+      "kerala_resident": true,
+      "is_rural": true,
+      "willing_for_manual_work": true
+    },
+    "disqualifiers": [
+      "is_urban",
+      "age_below_18"
+    ],
+    "documents_needed": [
+      "Aadhaar",
+      "Address proof (rural)",
+      "Bank account",
+      "Passport photos",
+      "Family details"
+    ],
+    "application_portal": "nregastrepts.nic.in",
+    "deadline": "Ongoing scheme",
+    "missing_field_questions": {}
+  },
+  "k友好的_scholarship": {
+    "name": "Kerala State Scholarship",
+    "description": "Scholarship for SC/ST/OBC students",
+    "benefit": "₹1,000-10,000 per year depending on course and category",
+    "conditions": {
+      "is_student": true,
+      "category_in": [
+        "SC",
+        "ST",
+        "OBC"
+      ],
+      "annual_income_max": 250000,
+      "kerala_resident": true
+    },
+    "disqualifiers": [
+      "income_above_250000",
+      "not_kerala_resident",
+      "category_general"
+    ],
+    "documents_needed": [
+      "Caste certificate",
+      "Income certificate",
+      "Previous mark sheets",
+      "College/school ID",
+      "Bank account",
+      "Aadhaar"
+    ],
+    "application_portal": "dcescholarship.kerala.gov.in",
+    "deadline": "Usually July-August for academic year",
+    "missing_field_questions": {
+      "is_student": {
+        "question_en": "Are you currently studying in a school or college?",
+        "question_ml": "നിങ്ങൾ ഇപ്പോൾ സ്കൂൾ അല്ലെങ്കിൽ കോളേജിൽ പഠിക്കുകയാണോ?",
+        "context_en": "This scholarship is only for students.",
+        "context_ml": "ഈ സ്കോളർഷിപ്പ് വിദ്യാർത്ഥികൾക്ക് മാത്രമാണ്.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "post_matric_scholarship": {
+    "name": "Post Matric Scholarship for SC/ST",
+    "description": "Higher education scholarship for SC/ST students",
+    "benefit": "Full tuition fee + maintenance allowance ₹500-1,500/month",
+    "conditions": {
+      "is_student": true,
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "annual_income_max": 250000,
+      "course_level_min": 11,
+      "kerala_resident": true
+    },
+    "disqualifiers": [
+      "income_above_250000",
+      "not_sc_st"
+    ],
+    "documents_needed": [
+      "Caste certificate",
+      "Income certificate",
+      "Admission letter",
+      "Mark sheets",
+      "Bank account",
+      "Aadhaar",
+      "Hostel certificate if applicable"
+    ],
+    "application_portal": "dcescholarship.kerala.gov.in",
+    "deadline": "Usually August-September",
+    "missing_field_questions": {
+      "is_student": {
+        "question_en": "Are you currently studying (class 11 or above)?",
+        "question_ml": "നിങ്ങൾ ഇപ്പോൾ പഠിക്കുകയാണോ (ക്ലാസ് 11 മുതൽ)?",
+        "context_en": "This scholarship is for students in class 11 and above.",
+        "context_ml": "ഈ സ്കോളർഷിപ്പ് ക്ലാസ് 11 മുതൽ ആണ്.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "fssai_basic_registration": {
+    "name": "FSSAI Basic Registration",
+    "description": "Basic food safety registration for small food businesses",
+    "benefit": "Legal recognition, can operate food business legally",
+    "conditions": {
+      "annual_turnover_max": 1200000,
+      "kerala_resident": true,
+      "is_food_business": true
+    },
+    "disqualifiers": [
+      "turnover_above_12_lakh"
+    ],
+    "documents_needed": [
+      "Aadhaar",
+      "Address proof of business",
+      "Photo",
+      "Bank details",
+      "List of food categories"
+    ],
+    "application_portal": "foscos.fssai.gov.in",
+    "deadline": "Must obtain before starting food business",
+    "missing_field_questions": {
+      "is_food_business": {
+        "question_en": "Are you running or planning to start a food business?",
+        "question_ml": "നിങ്ങൾ ഭക്ഷണ ബിസിനസ് നടത്തുകയാണോ അല്ലെങ്കിൽ ആരംഭിക്കാൻ ഉദ്ദേശിക്കുകയാണോ?",
+        "context_en": "This registration is only for food business owners.",
+        "context_ml": "ഈ രജിസ്ട്രേഷൻ ഭക്ഷണ ബിസിനസ് ഉടമകൾക്ക് മാത്രമാണ്.",
+        "input_type": "yesno"
+      }
+    }
+  },
+  "schemes": {
+    "name": "Schemes",
+    "description": "Schemes Schemes",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.612027",
+    "missing_field_questions": {}
+  },
+  "niramaya_health_insurance_scheme": {
+    "name": "Niramaya Health Insurance Scheme",
+    "description": "Niramaya Health Insurance Scheme 1Niramaya Health Insurance SchemeDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.612027",
+    "missing_field_questions": {}
+  },
+  "selfemployment_scheme_for_dependents_of_prisoners": {
+    "name": "Self-employment scheme for dependents of prisoners",
+    "description": "Self-employment scheme for dependents of prisoners 6Self-employment scheme for dependents of prisonersSocial Defence,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.612027",
+    "missing_field_questions": {}
+  },
+  "mandahasamscheme_to_provide_artificial_dentures_to": {
+    "name": "Mandahasam-Scheme to provide artificial dentures to Senior Citizens",
+    "description": "Mandahasam-Scheme to provide artificial dentures to Senior Citizens 13Mandahasam-Scheme to provide artificial dentures to Senior CitizensSenior Citizen,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.612027",
+    "missing_field_questions": {}
+  },
+  "abhayakiranam_schemefinancial_assistance_to_destit": {
+    "name": "Abhayakiranam scheme-Financial assistance to destitute widows",
+    "description": "Abhayakiranam scheme-Financial assistance to destitute widows 18Abhayakiranam scheme-Financial assistance to destitute widowsWomen,Destitute,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "is_widowed": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.612027",
+    "missing_field_questions": {}
+  },
+  "scheme_for_providing_assistive_devices_to_differen": {
+    "name": "Scheme for providing Assistive devices to Differently abled persons",
+    "description": "Scheme for providing Assistive devices to Differently abled persons 19Scheme for providing Assistive devices to Differently abled personsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.612027",
+    "missing_field_questions": {}
+  },
+  "sayamprabha_homecomprehensive_scheme_for_senior_ci": {
+    "name": "‘Sayamprabha Home’-Comprehensive scheme for Senior citizens",
+    "description": "‘Sayamprabha Home’-Comprehensive scheme for Senior citizens 20‘Sayamprabha Home’-Comprehensive scheme for Senior citizensSenior Citizen,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.612027",
+    "missing_field_questions": {}
+  },
+  "vidyakiranam_schemeeducational_assistance_to_child": {
+    "name": "Vidyakiranam scheme-Educational assistance to children of disabled parents",
+    "description": "Vidyakiranam scheme-Educational assistance to children of disabled parents 21Vidyakiranam scheme-Educational assistance to children of disabled parentsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "has_disability_cert": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.612027",
+    "missing_field_questions": {}
+  },
+  "vidyajyothi_scheme_financial_aid_for_uniforms_and_": {
+    "name": "Vidyajyothi scheme- Financial aid for uniforms and study materials to PwD students",
+    "description": "Vidyajyothi scheme- Financial aid for uniforms and study materials to PwD students 22Vidyajyothi scheme- Financial aid for uniforms and study materials to PwD studentsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "is_student": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.612027",
+    "missing_field_questions": {}
+  },
+  "scheme_for_imparting_skill_development_training_to": {
+    "name": "Scheme for imparting skill development training to Transgenders",
+    "description": "Scheme for imparting skill development training to Transgenders 23Scheme for imparting skill development training to TransgendersTransgenders,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.612027",
+    "missing_field_questions": {}
+  },
+  "swasraya_scheme_for_parents_guardians_of_phmr_pers": {
+    "name": "Swasraya scheme for parents/ guardians of PH/MR persons",
+    "description": "Swasraya scheme for parents/ guardians of PH/MR persons 24Swasraya scheme for parents/ guardians of PH/MR personsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "ananyam_scheme4235021028802": {
+    "name": "Ananyam scheme4235-02-102-88(02)",
+    "description": "Ananyam scheme4235-02-102-88(02) 25Ananyam scheme4235-02-102-88(02)Transgenders,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "pariraksha_scheme_for_differently_abled_persons": {
+    "name": "Pariraksha scheme for Differently abled persons",
+    "description": "Pariraksha scheme for Differently abled persons 31Pariraksha scheme for Differently abled personsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "vayomadhuram_scheme_for_providing_glucometer_to_se": {
+    "name": "Vayomadhuram scheme for providing glucometer to Senior Citizens",
+    "description": "Vayomadhuram scheme for providing glucometer to Senior Citizens 32Vayomadhuram scheme for providing glucometer to Senior CitizensSenior Citizen,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "sahachari_scheme_for_encouraging_ncc_nss_spc_units": {
+    "name": "Sahachari scheme for encouraging NCC/ NSS/ SPC units assisting CWDs",
+    "description": "Sahachari scheme for encouraging NCC/ NSS/ SPC units assisting CWDs 40Sahachari scheme for encouraging NCC/ NSS/ SPC units assisting CWDsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "vijayamritham_schemecash_award_for_meritorious_cwd": {
+    "name": "Vijayamritham scheme-Cash award for meritorious CWDs",
+    "description": "Vijayamritham scheme-Cash award for meritorious CWDs 41Vijayamritham scheme-Cash award for meritorious CWDsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "varnam_scheme_for_tg_students_pursuing_distance_ed": {
+    "name": "Varnam scheme for TG students pursuing distance education courses",
+    "description": "Varnam scheme for TG students pursuing distance education courses 43Varnam scheme for TG students pursuing distance education coursesTransgenders,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ],
+      "is_student": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "pratheeksha_scheme_for_rehabilitation_of_mentally_": {
+    "name": "Pratheeksha scheme for rehabilitation of mentally challenged persons",
+    "description": "Pratheeksha scheme for rehabilitation of mentally challenged persons 49Pratheeksha scheme for rehabilitation of mentally challenged personsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "athijeevanam_comprehensive_scheme_for_mainstreamin": {
+    "name": "Athijeevanam- Comprehensive Scheme for mainstreaming of PwDs",
+    "description": "Athijeevanam- Comprehensive Scheme for mainstreaming of PwDs 50Athijeevanam- Comprehensive Scheme for mainstreaming of PwDsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "prathyasha_scheme_for_repatriation_of_other_state_": {
+    "name": "Prathyasha scheme for repatriation of other state residents in PRCs",
+    "description": "Prathyasha scheme for repatriation of other state residents in PRCs 51Prathyasha scheme for repatriation of other state residents in PRCsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "saphalam_scheme_for_transgender_students_pursuing_": {
+    "name": "Saphalam scheme for Transgender students pursuing Professional courses",
+    "description": "Saphalam scheme for Transgender students pursuing Professional courses 55Saphalam scheme for Transgender students pursuing Professional coursesTransgenders,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ],
+      "is_student": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "vayoraksha_scheme_for_senior_citizens": {
+    "name": "Vayoraksha scheme for Senior Citizens",
+    "description": "Vayoraksha scheme for Senior Citizens 56Vayoraksha scheme for Senior CitizensSenior Citizen,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "jeevanam_selfemployment_scheme_to_dependents_of_cr": {
+    "name": "Jeevanam self-employment scheme to dependents of crime victims",
+    "description": "Jeevanam self-employment scheme to dependents of crime victims 57Jeevanam self-employment scheme to dependents of crime victimsSocial Defence,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "snehayanam_scheme_for_mothers_of_persons_with_spec": {
+    "name": "Snehayanam scheme for mothers of persons with special needs",
+    "description": "Snehayanam scheme for mothers of persons with special needs 58Snehayanam scheme for mothers of persons with special needsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "shreshtam_scheme_for_ensuring_participation_of_pwd": {
+    "name": "Shreshtam scheme for ensuring participation of PwDs in Arts & Sports",
+    "description": "Shreshtam scheme for ensuring participation of PwDs in Arts & Sports 60Shreshtam scheme for ensuring participation of PwDs in Arts & SportsDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "yathnam_scheme_for_transgenders_preparing_for_comp": {
+    "name": "Yathnam scheme for Transgenders preparing for competitive exams",
+    "description": "Yathnam scheme for Transgenders preparing for competitive exams 61Yathnam scheme for Transgenders preparing for competitive examsTransgenders,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "karuthal_scheme_for_transgender_persons22356020072": {
+    "name": "Karuthal scheme for Transgender persons2235-60-200-72(20)",
+    "description": "Karuthal scheme for Transgender persons2235-60-200-72(20) 63Karuthal scheme for Transgender persons2235-60-200-72(20)Transgenders,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.613533",
+    "missing_field_questions": {}
+  },
+  "sakalyam_scheme_vocational_training_to_transgender": {
+    "name": "Sakalyam scheme- Vocational training to Transgender persons2235-60-200-72(21)",
+    "description": "Sakalyam scheme- Vocational training to Transgender persons2235-60-200-72(21) 64Sakalyam scheme- Vocational training to Transgender persons2235-60-200-72(21)Transgenders,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.614867",
+    "missing_field_questions": {}
+  },
+  "mithram_scheme_job_skill_training_for_socially_dev": {
+    "name": "Mithram scheme- Job skill training for Socially deviants",
+    "description": "Mithram scheme- Job skill training for Socially deviants 65Mithram scheme- Job skill training for Socially deviantsSocial Defence,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.614867",
+    "missing_field_questions": {}
+  },
+  "imprest_money_scheme": {
+    "name": "Imprest Money scheme",
+    "description": "Imprest Money scheme 66Imprest Money schemeDifferently Abled,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.614867",
+    "missing_field_questions": {}
+  },
+  "pratibha_scheme": {
+    "name": "Pratibha scheme",
+    "description": "Pratibha scheme 69Pratibha schemeTransgenders,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.614867",
+    "missing_field_questions": {}
+  },
+  "housing_scheme_for_transgender_persons": {
+    "name": "Housing scheme for Transgender persons",
+    "description": "Housing scheme for Transgender persons 73Housing scheme for Transgender personsTransgenders,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.614867",
+    "missing_field_questions": {}
+  },
+  "sallapam_scheme_for_senior_citizens2235021016000": {
+    "name": "Sallapam scheme for Senior Citizens2235-02-101-60(00)",
+    "description": "Sallapam scheme for Senior Citizens2235-02-101-60(00) 74Sallapam scheme for Senior Citizens2235-02-101-60(00)Senior Citizen,",
+    "benefit": "Check official website",
+    "conditions": {
+      "age_min": 60,
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.614867",
+    "missing_field_questions": {}
+  },
+  "vayosanthwanam_scheme_for_bedridden_destitute_elde": {
+    "name": "Vayosanthwanam scheme for bedridden destitute elderlies2235-02-101-58(00)",
+    "description": "Vayosanthwanam scheme for bedridden destitute elderlies2235-02-101-58(00) 75Vayosanthwanam scheme for bedridden destitute elderlies2235-02-101-58(00)Senior Citizen,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.614867",
+    "missing_field_questions": {}
+  },
+  "overseas_scholarship_scheme_for_transgender_person": {
+    "name": "Overseas scholarship scheme for Transgender persons",
+    "description": "Overseas scholarship scheme for Transgender persons 76Overseas scholarship scheme for Transgender personsTransgenders,",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "sjd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:43.614867",
+    "missing_field_questions": {}
+  },
+  "iecchild_protection": {
+    "name": "IEC-Child Protection",
+    "description": "IEC-Child Protection",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://wcd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "wcd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:44.618136",
+    "missing_field_questions": {}
+  },
+  "mother_child": {
+    "name": "Mother & Child",
+    "description": "Mother & Child",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://wcd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "wcd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:44.618136",
+    "missing_field_questions": {}
+  },
+  "educational_assistance_to_women_headed_family": {
+    "name": "Educational Assistance to Women  Headed Family",
+    "description": "Educational Assistance to Women  Headed Family",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_st": true,
+      "has_family": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://wcd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "wcd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:44.619143",
+    "missing_field_questions": {}
+  },
+  "mangalya_scheme_for_widow_remarriage": {
+    "name": "Mangalya scheme for widow remarriage",
+    "description": "Mangalya scheme for widow remarriage",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true,
+      "is_widowed": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://wcd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "wcd.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:44.619143",
+    "missing_field_questions": {}
+  },
+  "about_akshaya": {
+    "name": "About Akshaya",
+    "description": "About Akshaya",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.753669",
+    "missing_field_questions": {}
+  },
+  "vision_mission": {
+    "name": "Vision & Mission",
+    "description": "Vision & Mission",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.753669",
+    "missing_field_questions": {}
+  },
+  "institutional_framework": {
+    "name": "Institutional Framework",
+    "description": "Institutional Framework",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_st": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.753669",
+    "missing_field_questions": {}
+  },
+  "government_to_citizen": {
+    "name": "Government to Citizen",
+    "description": "Government to Citizene-DistrictAadhaarCitizen Services",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_st": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Aadhaar"
+    ],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.753669",
+    "missing_field_questions": {}
+  },
+  "edistrict": {
+    "name": "e-District",
+    "description": "e-District",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_st": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.753669",
+    "missing_field_questions": {}
+  },
+  "aadhaar": {
+    "name": "Aadhaar",
+    "description": "Aadhaar",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [
+      "Aadhaar"
+    ],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.753669",
+    "missing_field_questions": {}
+  },
+  "citizen_services": {
+    "name": "Citizen Services",
+    "description": "Citizen Services",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.753669",
+    "missing_field_questions": {}
+  },
+  "business_to_citizen": {
+    "name": "Business to Citizen",
+    "description": "Business to Citizen",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.753669",
+    "missing_field_questions": {}
+  },
+  "financial_inclusion": {
+    "name": "Financial Inclusion",
+    "description": "Financial InclusionKiosk BankingInsurance",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_general": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "kiosk_banking": {
+    "name": "Kiosk Banking",
+    "description": "Kiosk Banking",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "education": {
+    "name": "Education",
+    "description": "EducationDigital Financial Literacy Campaign",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "digital_financial_literacy_campaign": {
+    "name": "Digital Financial Literacy Campaign",
+    "description": "Digital Financial Literacy Campaign",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "help_desk": {
+    "name": "Help Desk",
+    "description": "Help DeskGeneral InformationFAQ On ServicesKnowledge SharingDistrict ProfilesDownloads/Government OrdersFeedback / Grievances",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "general_information": {
+    "name": "General Information",
+    "description": "General Information",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_general": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "faq_on_services": {
+    "name": "FAQ On Services",
+    "description": "FAQ On Services",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "knowledge_sharing": {
+    "name": "Knowledge Sharing",
+    "description": "Knowledge Sharing",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "district_profiles": {
+    "name": "District Profiles",
+    "description": "District Profiles",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_st": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "downloadsgovernment_orders": {
+    "name": "Downloads/Government Orders",
+    "description": "Downloads/Government Orders",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "feedback_grievances": {
+    "name": "Feedback / Grievances",
+    "description": "Feedback / Grievances",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "news_events": {
+    "name": "News & Events",
+    "description": "News & EventsEvents CalendarNotificationsMediaGalleryImage GalleryVideo Gallery",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "BPL",
+        "APL",
+        "SC",
+        "ST",
+        "OBC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "events_calendar": {
+    "name": "Events Calendar",
+    "description": "Events Calendar",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "notifications": {
+    "name": "Notifications",
+    "description": "Notifications",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "gallery": {
+    "name": "Gallery",
+    "description": "GalleryImage GalleryVideo Gallery",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "BPL",
+        "APL",
+        "SC",
+        "ST",
+        "OBC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "image_gallery": {
+    "name": "Image Gallery",
+    "description": "Image Gallery",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "BPL",
+        "APL",
+        "SC",
+        "ST",
+        "OBC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "video_gallery": {
+    "name": "Video Gallery",
+    "description": "Video Gallery",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "BPL",
+        "APL",
+        "SC",
+        "ST",
+        "OBC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "contact_us": {
+    "name": "Contact us",
+    "description": "Contact us",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "locate_your_service": {
+    "name": "Locate Your Service",
+    "description": "Locate Your Service",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_general": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "user_login": {
+    "name": "User Login",
+    "description": "User Login",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "view_services": {
+    "name": "View Services",
+    "description": "Empowering KeralaThe visionaries of Kerala can be proud of the moment when they launched Akshaya Project as an initiative to address the backwardness of the Malappuram district in 2002 They were able to materialize the exact concept PURA and it was officially inaugurated by none other than Dr. APJ Abdul Kalam on 18th Nov 2002.View Services",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "view_videos": {
+    "name": "View Videos",
+    "description": "View Videos",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.754176",
+    "missing_field_questions": {}
+  },
+  "view_faqs": {
+    "name": "View FAQs",
+    "description": "F.A.QAkshaya has to surpass many challenges, everyone who respect its potential is keen to seek something innovative. Have questions? Probably its already been answered!View FAQs",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.755191",
+    "missing_field_questions": {}
+  },
+  "read_more": {
+    "name": "Read More",
+    "description": "Akshaya - Gateway of OpportunitiesAkshaya has to surpass many challenges, everyone who respect its potential is keen to seek something innovative. Akshaya, an ambitious endeavor of the State of Kerala was inaugurated by Dr. APJ Abdul Kalam, on November 18, 2002. The Government’s focus on digitization of the State has entailed a revolution in the design and operation of public services through the reinvention of service delivery channels. Emergence of digital organizations to create services led ",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.755191",
+    "missing_field_questions": {}
+  },
+  "view_all": {
+    "name": "view all",
+    "description": "Notifications—view allProject Assistant Rank list - 2026view detailsNotification - Akshaya Entrepreneurship Selection for 14 Districtsview detailsNotification - Akshaya Entrepreneurship Selection for 14 Districtsview details",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.755191",
+    "missing_field_questions": {}
+  },
+  "view_details": {
+    "name": "view details",
+    "description": "Project Assistant Rank list - 2026view details",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_st": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.755191",
+    "missing_field_questions": {}
+  },
+  "kasaragod_district_events": {
+    "name": "Kasaragod District Events",
+    "description": "Kasaragod District EventsView Album",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_st": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "view_album": {
+    "name": "View Album",
+    "description": "Kasaragod District EventsView Album",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_st": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "kottayam": {
+    "name": "Kottayam",
+    "description": "KottayamView Album",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "ernakulam_district_events": {
+    "name": "Ernakulam District Events",
+    "description": "Ernakulam District EventsView Album",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_st": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "kasaragod": {
+    "name": "Kasaragod",
+    "description": "KasaragodView Album",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "palakkad": {
+    "name": "Palakkad",
+    "description": "PalakkadView Album",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "thrissur": {
+    "name": "Thrissur",
+    "description": "ThrissurView Album",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_general": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "visit_our_blog": {
+    "name": "Visit Our Blog",
+    "description": "INTERESTED TO READ MOREVisit Our Blog",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "grieviance_redressal_cell": {
+    "name": "Grieviance Redressal Cell",
+    "description": "Grieviance Redressal Cell",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "govt_of_kerala": {
+    "name": "Govt of Kerala",
+    "description": "Govt of Kerala",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "national_portal_of_india": {
+    "name": "National Portal of India",
+    "description": "National Portal of India",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "04712525444": {
+    "name": "0471-2525444",
+    "description": "0471-2525444aspo.akshaya@kerala.gov.inwww.akshaya.kerala.gov.in",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "aspoakshayakeralagovin": {
+    "name": "aspo.akshaya@kerala.gov.in",
+    "description": "0471-2525444aspo.akshaya@kerala.gov.inwww.akshaya.kerala.gov.in",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "wwwakshayakeralagovin": {
+    "name": "www.akshaya.kerala.gov.in",
+    "description": "0471-2525444aspo.akshaya@kerala.gov.inwww.akshaya.kerala.gov.in",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "services": {
+    "name": "Services",
+    "description": "Services",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "information": {
+    "name": "Information",
+    "description": "Information",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "contact": {
+    "name": "Contact",
+    "description": "Contact",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://akshaya.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "akshaya.kerala.gov.in",
+    "scraped_at": "2026-04-08T12:58:49.756188",
+    "missing_field_questions": {}
+  },
+  "schemes_home_ksdcscst_government_of_kerala": {
+    "name": "Schemes - Home - KSDCSCST - Government of Kerala",
+    "description": "Schemes - Home - KSDCSCST - Government of Kerala\nSchemes being implemented by the Corporation can be categorised into the following, based on the source of finance and the nature and purpose of the assistance.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://www.ksdcscst.kerala.gov.in/Schemes",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:52.110665",
+    "missing_field_questions": {}
+  },
+  "pdf_government_of_kerala": {
+    "name": "[PDF] ഭരണഭാഷ - Government of Kerala",
+    "description": "[PDF] ഭരണഭാഷ - Government of Kerala\nSCHEME 2024-25 [FINANCIAL ASSISTANCE FOR MARRIAGE]. 1. Introduction: Kerala ... Beneficiaries & Eligibility Criteria. Newly married women belonging to ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://document.kerala.gov.in/documents/governmentorders/govtorder2901202519:39:24.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:52.110665",
+    "missing_field_questions": {}
+  },
+  "pdf_government_of_kerala_1": {
+    "name": "[PDF] GOVERNMENT OF KERALA",
+    "description": "[PDF] GOVERNMENT OF KERALA\nSub:- Periodical Surrender of Earned leave 2024-25 - Eligibility. - ... under the Employees Provident Fund Scheme shall be paid in cash with ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://document.kerala.gov.in/documents/circulars/circular0507202413:25:52.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:52.110665",
+    "missing_field_questions": {}
+  },
+  "pdf_150_sha_government_of_kerala": {
+    "name": "[PDF] 150 - sha - Government of Kerala",
+    "description": "[PDF] 150 - sha - Government of Kerala\nAge Criteria: If the applicant does not fall within the specified age range covered by the scheme (birth to 18 years), at the time submission of ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sha.kerala.gov.in/wp-content/uploads/2024/01/GORtNo.3356-2023-dated.20.12.23-AC_HCT-SoP.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:52.110665",
+    "missing_field_questions": {}
+  },
+  "pdf_circular_finance_department_government_of_kera": {
+    "name": "[PDF] circular - Finance Department - Government of Kerala",
+    "description": "[PDF] circular - Finance Department - Government of Kerala\n2024. Sub:- Periodical Surrender of Earned leave - 2024-25 - Eligibility of employees ... Contributory Provident Fund Schemes shall be paid in ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://finance.kerala.gov.in/includeWeb/fileViewer.jsp?dId=c7xj0qe5va9zj0q",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:52.110665",
+    "missing_field_questions": {}
+  },
+  "kshec_scholarship_portal_home": {
+    "name": "KSHEC Scholarship Portal: Home",
+    "description": "KSHEC Scholarship Portal: Home\nHEC 2025-26 UG Fresh Scholarships Now Open for Applications! 31 JAN. Institutions can login with existing userid as password and login.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://scholarship.kshec.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:52.111690",
+    "missing_field_questions": {}
+  },
+  "pdf_gist_of_schemes_implemented_by_dairy_developme": {
+    "name": "[PDF] gist of schemes implemented by dairy development department",
+    "description": "[PDF] gist of schemes implemented by dairy development department\nSUSBSIDY - PHASE I - 2024-25. 60 % OF Rs 15.0 Lakh. ESTABLISHING HEIFER ... • The eligibility criteria and priority criteria as detailed in the conventional.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://dairydevelopment.kerala.gov.in/images/pdf/schemes/GIST.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:52.111690",
+    "missing_field_questions": {}
+  },
+  "the_kerala_state_insurance_department_ksid": {
+    "name": "The Kerala State Insurance Department: KSID",
+    "description": "The Kerala State Insurance Department: KSID\nDetailed eligibility criteria are available under each scheme section. What types of insurance schemes are offered? The department offers schemes such as:.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://insurance.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:52.111690",
+    "missing_field_questions": {}
+  },
+  "pdf_concurrent_evaluation_and_monitoring_of_scheme": {
+    "name": "[PDF] Concurrent Evaluation And Monitoring of Schemes (CEMS)",
+    "description": "[PDF] Concurrent Evaluation And Monitoring of Schemes (CEMS)\nlakh is provided for the scheme during 2024-25 for starting stem cell / bone ... Eligibility Criteria of the Scheme: 1. Scheduled Caste ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://budget.kerala.gov.in/keralabudgetdoc/2025_26/CEMS.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:52.111690",
+    "missing_field_questions": {}
+  },
+  "cancer_suraksha_scheme_social_justice_kerala": {
+    "name": "Cancer Suraksha Scheme - Social Justice, Kerala",
+    "description": "Cancer Suraksha Scheme - Social Justice, Kerala\nThe Government of Kerala launched the Cancer Suraksha Scheme on 1 November 2008 for children below the age of 18 who suffer from cancer and belong to such ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/scheme-info.php?scheme_id=IDk3",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:54.502231",
+    "missing_field_questions": {}
+  },
+  "benefits_to_anganwadi_workers_and_helpers_through_": {
+    "name": "Benefits to Anganwadi Workers and Helpers through Welfare Fund",
+    "description": "Benefits to Anganwadi Workers and Helpers through Welfare Fund\nBenefits to Anganwadi Workers and Helpers through Welfare Fund ; Pension. @ Rs.1000/- per month to Anganwadi Worker @ Rs.600/- per month to Anganwadi Helper.",
+    "benefit": "Check official website",
+    "conditions": {
+      "receives_other_pension": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/scheme-info.php?scheme_id=IDg5",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:54.502231",
+    "missing_field_questions": {}
+  },
+  "assistance_to_disabled_persons_for_purchase_for_fi": {
+    "name": "Assistance to Disabled Persons for Purchase for Fitting Aids and ...",
+    "description": "Assistance to Disabled Persons for Purchase for Fitting Aids and ...\nThe main objective of the scheme is to assist the needy disabled persons in procuring durable sophisticated and scientifically manufactured, modern, standard ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ],
+      "has_disability_cert": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/award_details.php?awid=MTM=",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:54.502231",
+    "missing_field_questions": {}
+  },
+  "vayoraksha_scheme_for_senior_citizens_social_justi": {
+    "name": "Vayoraksha scheme for Senior Citizens - Social Justice, Kerala",
+    "description": "Vayoraksha scheme for Senior Citizens - Social Justice, Kerala\na) The key objective of the scheme is to provide assistance and support to the needy elderly population during crisis. b) Provide emergency medical aid to the ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/scheme-info.php?scheme_id=IDE3Ng==",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:54.502231",
+    "missing_field_questions": {}
+  },
+  "scheme_of_widow_remarriage_mangalya_social_justice": {
+    "name": "Scheme of Widow Remarriage - Mangalya - Social Justice, Kerala",
+    "description": "Scheme of Widow Remarriage - Mangalya - Social Justice, Kerala\nThe Government of Kerala envisages the scheme called Mangalaya to encourage widow remarriage. The scheme imparts financial assistance for the widows.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ],
+      "is_widowed": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/scheme-info.php?scheme_id=IDgx",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:54.502231",
+    "missing_field_questions": {}
+  },
+  "schemes_social_justice_kerala": {
+    "name": "Schemes - Social Justice, Kerala",
+    "description": "Schemes - Social Justice, Kerala\nScheme Name, Beneficiary. 1, Niramaya Health Insurance Scheme · Differently Abled ... Abhayakiranam scheme-Financial assistance to destitute widows · Women ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ],
+      "is_widowed": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:54.502231",
+    "missing_field_questions": {}
+  },
+  "niramaya_health_insurance_scheme_social_justice_ke": {
+    "name": "Niramaya Health Insurance Scheme - Social Justice, Kerala",
+    "description": "Niramaya Health Insurance Scheme - Social Justice, Kerala\nThrough this scheme the beneficiaries can avail an insurance coverage up to 1 lakh and it would be renewed every year. Facility for OPD treatment including the ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "annual_income_max": 100000,
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/scheme-info.php?scheme_id=IDY2",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:54.502231",
+    "missing_field_questions": {}
+  },
+  "schemes_wcd_kerala": {
+    "name": "Schemes - WCD Kerala",
+    "description": "Schemes - WCD Kerala\nOnline portal for applying to some of the state government schemes implemented by WCD. The applicant has to do an ONE-TIME REGISTRATIOn to apply for schemes.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://wcd.kerala.gov.in/schemes.php",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:56.685842",
+    "missing_field_questions": {}
+  },
+  "icds_scheme_wcd_kerala": {
+    "name": "ICDS Scheme - WCD Kerala",
+    "description": "ICDS Scheme - WCD Kerala\nIt seeks to provide children with an integrated package of services including supplementary nutrition, healthcare and pre-school education.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true,
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://wcd.kerala.gov.in/article.php?itid=Mzg3",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:56.685842",
+    "missing_field_questions": {}
+  },
+  "our_responsibility_to_children_orc_wcd_kerala": {
+    "name": "Our Responsibility to Children (ORC) - WCD Kerala",
+    "description": "Our Responsibility to Children (ORC) - WCD Kerala\nORC is an innovative initiative of Integrated Child protection Scheme (ICPS), Kerala, under the Department of Women and Child Development.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://wcd.kerala.gov.in/article.php?itid=Mzg5",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:56.685842",
+    "missing_field_questions": {}
+  },
+  "educational_assistance_to_women_headed_family_wcd_": {
+    "name": "Educational Assistance to Women Headed Family - WCD Kerala",
+    "description": "Educational Assistance to Women Headed Family - WCD Kerala\nThe scheme propose to extend a helping hand to these families by way of providing financial assistance to the education of children.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "has_family": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://wcd.kerala.gov.in/scheme-info.php?id=NA==",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:56.685842",
+    "missing_field_questions": {}
+  },
+  "home_kerala_pravasi_welfare_board": {
+    "name": "Home - Kerala Pravasi Welfare Board",
+    "description": "Home - Kerala Pravasi Welfare Board\nThe Act envisages many welfare schemes such as pension schemes, family pension schemes, medical aid, death assistance, marriage assistance, educational ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "receives_other_pension": true,
+      "has_family": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://pravasikerala.org/eng/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:59.123704",
+    "missing_field_questions": {}
+  },
+  "schemes_local_self_government_department_lsgd_kera": {
+    "name": "Schemes | Local Self Government Department - LSGD Kerala",
+    "description": "Schemes | Local Self Government Department - LSGD Kerala\nSchemes · LIFE · EMS Housing Scheme · Indira Awaas Yojana (IAY) · Pradhan Mantri Gram Sadak Yojana (PMGSY)(U) · Pradhan Mantri Awas Yojana – Gramin (PMAY-G) · Rajiv ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_sc": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://lsgkerala.gov.in/en/schemes",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:59.123704",
+    "missing_field_questions": {}
+  },
+  "kerala_government_welfare_schemes_overview_pdf_scr": {
+    "name": "Kerala Government Welfare Schemes Overview | PDF - Scribd",
+    "description": "Kerala Government Welfare Schemes Overview | PDF - Scribd\nEach scheme includes a brief description of its benefits, including financial assistance, health support, educational aid, and skill development. The ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://www.scribd.com/document/930310228/Scheme-Name",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:59.123704",
+    "missing_field_questions": {}
+  },
+  "samaswasam_social_security_mission": {
+    "name": "Samaswasam - Social Security Mission",
+    "description": "Samaswasam - Social Security Mission\n",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_general": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://socialsecuritymission.gov.in/2024/07/25/samaswasam/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:59.123704",
+    "missing_field_questions": {}
+  },
+  "welfare_schemes_kerala_labour_welfare_fund_board": {
+    "name": "Welfare Schemes - Kerala Labour Welfare Fund Board",
+    "description": "Welfare Schemes - Kerala Labour Welfare Fund Board\nWelfare Schemes · High School Education Grant · Cash Award(SSLC,CBSE,ICSE,ISE) · Higher Education Grant · I.T.I Training Programme · Computer Training Programme.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://labourwelfarefund.in/scheme",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:59.123704",
+    "missing_field_questions": {}
+  },
+  "kerala_myscheme": {
+    "name": "Kerala - myScheme",
+    "description": "Kerala - myScheme\nThe scheme “Financial Assistance to Ex-Convicts” was launched by the Department of Social Justice, Government of Kerala. This scheme is implemented by the ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://www.myscheme.gov.in/search/state/Kerala",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:59.123704",
+    "missing_field_questions": {}
+  },
+  "social_welfare_pension_local_self_government_depar": {
+    "name": "Social Welfare Pension | Local Self Government Department",
+    "description": "Social Welfare Pension | Local Self Government Department\nOfficial Web Portal of Kerala Local Government, Government of Kerala, Owned by Local Self Government Department, Developed by Information Kerala Mission",
+    "benefit": "Check official website",
+    "conditions": {
+      "receives_other_pension": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://lsgkerala.gov.in/en/welfarepension",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:59.123704",
+    "missing_field_questions": {}
+  },
+  "welfare_pension_kerala_govt_to_issue_one_more_inst": {
+    "name": "Welfare pension: Kerala govt to issue one more instalment",
+    "description": "Welfare pension: Kerala govt to issue one more instalment\nAround 62 lakh people will get Rs 1,600 each, state Finance Minister K N Balagopal said, adding the pensioners will start getting the amount ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "annual_income_max": 6200000,
+      "category_st": true,
+      "receives_other_pension": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://indianexpress.com/article/cities/thiruvananthapuram/welfare-pension-kerala-govt-to-issue-one-more-instalment-9648539/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:58:59.123704",
+    "missing_field_questions": {}
+  },
+  "kerala_ration_card_list_2026_status_check_download": {
+    "name": "Kerala Ration Card: List 2026, Status Check, Download, Apply Online",
+    "description": "Kerala Ration Card: List 2026, Status Check, Download, Apply Online\nThe Kerala Government offers this scheme to people of the state who fall above the poverty line. Non-priority non-subsidy members also get ...",
+    "benefit": "Subsidized service",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://cleartax.in/s/kerala-ration-card",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:59:01.530028",
+    "missing_field_questions": {}
+  },
+  "kerala_ration_card_types_documents_required_and_ap": {
+    "name": "Kerala Ration Card: Types, Documents Required and Application ...",
+    "description": "Kerala Ration Card: Types, Documents Required and Application ...\nRation Card Kerala helps you buy food grains at subsidised rates from Fair Price Shops (FPS) in the state. The Kerala government issues three ...",
+    "benefit": "Subsidized service",
+    "conditions": {
+      "category_st": true,
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://www.adityabirlacapital.com/abc-of-money/all-you-need-to-know-about-ration-card-in-kerala",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:59:01.530028",
+    "missing_field_questions": {}
+  },
+  "radio_media_village_908_facebook": {
+    "name": "Radio Media Village 90.8 - Facebook",
+    "description": "Radio Media Village 90.8 - Facebook\nIf you're a white (APL) or blue (non-priority subsidy) ration card holder in Kerala, you may be eligible to upgrade to a pink (priority ...",
+    "benefit": "Subsidized service",
+    "conditions": {
+      "category_apl": true,
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://www.facebook.com/radiomediavillage90.8/posts/%E0%B4%AE%E0%B5%81%E0%B5%BB%E0%B4%97%E0%B4%A3%E0%B4%A8-%E0%B4%B5%E0%B4%BF%E0%B4%AD%E0%B4%BE%E0%B4%97%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BF%E0%B4%B2%E0%B5%87%E0%B4%AF%E0%B4%BF%E0%B4%95%E0%B5%8D-%E0%B4%AE%E0%B4%BE%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%82-get-priority-benefits-if-youre-a-white-apl-or-blue/1235173765286890/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:59:01.530028",
+    "missing_field_questions": {}
+  },
+  "citizen_login_kerala_civil_supplies": {
+    "name": "Citizen Login - Kerala Civil Supplies",
+    "description": "Citizen Login - Kerala Civil Supplies\nPlease download Sandes Mobile App to obtain the Ration card online application status & Print passwords. റേഷൻ കാർഡ് ഓൺലൈൻ ആപ്ലിക്കേഷൻ സ്റ്റാറ്റസ്, പ്രിന്റ് പാസ്‌വേഡ് എന്നിവ ലഭിക്കുന്നതിന്",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_st": true,
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://ecitizen.civilsupplieskerala.gov.in/index.php/c_login",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:59:01.530028",
+    "missing_field_questions": {}
+  },
+  "what_are_the_different_types_of_ration_cards_in_ke": {
+    "name": "What are the different types of ration cards in Kerala? - Quora",
+    "description": "What are the different types of ration cards in Kerala? - Quora\nThere are mainly two types of ration cards in Kerala- APL and BPL. APL ration cards are for people who are above poverty like while BPL is for people below ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "annual_income_max": 100000,
+      "category_in": [
+        "BPL",
+        "APL"
+      ],
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://www.quora.com/What-are-the-different-types-of-ration-cards-in-Kerala",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:59:01.530028",
+    "missing_field_questions": {}
+  },
+  "kerala_ration_card_key_details_and_steps_to_apply_": {
+    "name": "Kerala Ration Card: Key Details and Steps to Apply - KreditBee",
+    "description": "Kerala Ration Card: Key Details and Steps to Apply - KreditBee\nThe white card is intended for Above Poverty Line (APL) families with an annual income of more than ₹100,000. These families are eligible for 2 ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "APL"
+      ],
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://www.kreditbee.in/blog/kerala-ration-card",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:59:01.530028",
+    "missing_field_questions": {}
+  },
+  "kerela_ration_card_application_online_in_4_steps_i": {
+    "name": "Kerela Ration Card Application Online in 4 Steps - IndiaFilings",
+    "description": "Kerela Ration Card Application Online in 4 Steps - IndiaFilings\nKerala Ration Card Types ; Pink Card, Priority or Below Poverty Line (BPL), 5 kg of Food Grains completely free for each member of the family.",
+    "benefit": "Free service/benefit",
+    "conditions": {
+      "annual_income_max": 100000,
+      "category_in": [
+        "ST",
+        "BPL"
+      ],
+      "owns_4_wheeler": true,
+      "has_family": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://www.indiafilings.com/learn/kerala-ration-card",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:59:01.530028",
+    "missing_field_questions": {}
+  },
+  "bpl_card_kerala_to_apply_for_a_bpl_below_poverty_l": {
+    "name": "BPL Card Kerala To apply for a BPL (Below Poverty Line) ration ...",
+    "description": "BPL Card Kerala To apply for a BPL (Below Poverty Line) ration ...\nകയ്യിലുള്ള APL കാർഡുകൾ BPL ആക്കാം ഒരു ലക്ഷം കാർഡുകൾ വിതരണം ചെയ്യും|വേഗം അപേക്ഷിക്കൂ|BPL Card Kerala To apply for a BPL (Below Poverty Line) ration card...",
+    "benefit": "Check official website",
+    "conditions": {
+      "annual_income_max": 100000,
+      "category_in": [
+        "BPL",
+        "APL"
+      ],
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card",
+      "BPL card"
+    ],
+    "application_portal": "https://www.facebook.com/MediaCompanionChannel/posts/%E0%B4%95%E0%B4%AF%E0%B5%8D%E0%B4%AF%E0%B4%BF%E0%B4%B2%E0%B5%81%E0%B4%B3%E0%B5%8D%E0%B4%B3-apl-%E0%B4%95%E0%B4%BE%E0%B5%BC%E0%B4%A1%E0%B5%81%E0%B4%95%E0%B5%BE-bpl-%E0%B4%86%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%82-%E0%B4%92%E0%B4%B0%E0%B5%81-%E0%B4%B2%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%82-%E0%B4%95%E0%B4%BE%E0%B5%BC%E0%B4%A1%E0%B5%81%E0%B4%95%E0%B5%BE-%E0%B4%B5%E0%B4%BF%E0%B4%A4%E0%B4%B0%E0%B4%A3%E0%B4%82-%E0%B4%9A%E0%B5%86%E0%B4%AF%E0%B5%8D%E0%B4%AF%E0%B5%81%E0%B4%82%E0%B4%B5%E0%B5%87%E0%B4%97%E0%B4%82-%E0%B4%85%E0%B4%AA%E0%B5%87%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%BF%E0%B4%95%E0%B5%8D/1231774988972943/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:59:01.530028",
+    "missing_field_questions": {}
+  },
+  "apl_ration_card_in_kerala_ensuring_food_security_f": {
+    "name": "APL Ration Card in Kerala: Ensuring Food Security for All - Marg Erp",
+    "description": "APL Ration Card in Kerala: Ensuring Food Security for All - Marg Erp\nThe APL Ration Card is issued to households that fall above the poverty line but still require assistance to meet their basic food needs.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "APL",
+        "General"
+      ],
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://margcompusoft.com/m/apl-ration-card-in-kerala/?srsltid=AfmBOoq6tkwMZLERySkK_V8CXTuYtQbp_5QrYR16jBXDr3yIq767eKw7",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:59:01.530028",
+    "missing_field_questions": {}
+  },
+  "kerala_apl_card_holders_to_get_rice_subsidy_throug": {
+    "name": "Kerala: APL card holders to get rice subsidy through banks",
+    "description": "Kerala: APL card holders to get rice subsidy through banks\nAs per the current rates, BPL families would continue to receive 25 kg rice at Rupee one per kg and will be provided with RSVY Smart Card to ...",
+    "benefit": "Subsidized service",
+    "conditions": {
+      "annual_income_max": 100000,
+      "category_in": [
+        "BPL",
+        "APL",
+        "General"
+      ],
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://www.business-standard.com/article/pti-stories/kerala-apl-card-holders-to-get-rice-subsidy-through-banks-112110700667_1.html",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T12:59:01.530028",
+    "missing_field_questions": {}
+  },
+  "kerala_state_housing_board_kshb": {
+    "name": "Kerala State Housing Board | KSHB",
+    "description": "Kerala State Housing Board | KSHB\n... Scheme for the financial year 2025-26 can apply online now. The last date for receiving applications is July 31, 2025. Apply now · Loan Linked Subsidy Scheme.",
+    "benefit": "Subsidized service",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://kshb.kerala.gov.in/en/home-2/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:00:23.001979",
+    "missing_field_questions": {}
+  },
+  "entrepreneur_support_scheme_invest_kerala": {
+    "name": "Entrepreneur Support Scheme - Invest Kerala",
+    "description": "Entrepreneur Support Scheme - Invest Kerala\nFor Young (18 to 45 years), Women, SC/ST and Non Resident Keralite (NRK) entrepreneurs, the assistance is 25% limited to Rs 40 lakh. Enterprises in priority ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "annual_income_max": 4000000,
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://invest.kerala.gov.in/resources/schemes/entrepreneur-support-scheme/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:00:23.001979",
+    "missing_field_questions": {}
+  },
+  "entrepreneur_support_scheme_ess_kswift": {
+    "name": "entrepreneur support scheme (ess) - K-Swift",
+    "description": "entrepreneur support scheme (ess) - K-Swift\nThe assistance is limited to 50% of the total eligible support limited to Rs 3 lakhs on sanctioning the term loan from the bank. 2nd stage - Investment Support.",
+    "benefit": "Check official website",
+    "conditions": {
+      "annual_income_max": 300000,
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://kswift.kerala.gov.in/index/incentives.php",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:00:23.001979",
+    "missing_field_questions": {}
+  },
+  "prathibha_scholarship_programme_kerala_state_counc": {
+    "name": "Prathibha Scholarship Programme – KERALA STATE COUNCIL ...",
+    "description": "Prathibha Scholarship Programme – KERALA STATE COUNCIL ...\nScholarships are awarded to students of Kerala origin who have qualified meritoriously in the Higher Secondary Examination, for pursuing Undergraduate and ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ],
+      "is_student": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://kscste.kerala.gov.in/prathibha-scholarship-programme/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:00:23.001979",
+    "missing_field_questions": {}
+  },
+  "pdf_guidelines_for_projects_under_the_climate_chan": {
+    "name": "[PDF] Guidelines for Projects under the \"Climate Change\" Plan Scheme ...",
+    "description": "[PDF] Guidelines for Projects under the \"Climate Change\" Plan Scheme ...\nWho is eligible? The proposals can be submitted by an individual or a team of scientists/ technologists engaged in science and technology research fields in ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://envt.kerala.gov.in/wp-content/uploads/2024/09/Guidelines-project-proposal.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:00:23.001979",
+    "missing_field_questions": {}
+  },
+  "dce_scholarship": {
+    "name": "DCE Scholarship",
+    "description": "DCE Scholarship\n1) Research Award · 2) Bhinnaseshy Souhrida Scholarship · 3) Chief Ministers Scholarship Award · 4) Jilla Merit Award · 5) Hindi Scholarship · 6) Suvarna Jubilee ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://dcescholarship.kerala.gov.in/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:00:23.001979",
+    "missing_field_questions": {}
+  },
+  "application_forms_social_justice_kerala": {
+    "name": "Application Forms - Social Justice, Kerala",
+    "description": "Application Forms - Social Justice, Kerala\nSl No. Title ; 1, Overseas scholarship scheme for Transgender persons ; 2, Housing scheme for Transgender persons ; 3, Financial assistance for PwD sports ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sjd.kerala.gov.in/downloads.php?secid=MzQ=",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:00:24.890157",
+    "missing_field_questions": {}
+  },
+  "bpl_renewal_kwa": {
+    "name": "BPL Renewal - KWA",
+    "description": "BPL Renewal - KWA\nBPL Application submission for year 2026 is closed on 31.01.2026. Kerala Water Authority. Kerala's Nodal Agency For Drinking Water Supply And Sewerage ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "annual_income_max": 100000,
+      "category_bpl": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://kwa.kerala.gov.in/en/bpl-renewal/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:00:30.475320",
+    "missing_field_questions": {}
+  },
+  "types_of_ration_cards_in_india_apl_bpl_aay_and_phh": {
+    "name": "Types of Ration Cards in India: APL, BPL, AAY, and PHH - Paytm",
+    "description": "Types of Ration Cards in India: APL, BPL, AAY, and PHH - Paytm\nUnder this program, eligible APL families receive a monthly allocation of 10kg to 20kg of food grains per family. BPL Ration Card. Families ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "annual_income_max": 100000,
+      "category_in": [
+        "BPL",
+        "APL"
+      ],
+      "owns_4_wheeler": true,
+      "has_family": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://paytm.com/blog/ration-card/types-of-ration-cards-in-india/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:00:30.475320",
+    "missing_field_questions": {}
+  },
+  "in_kerala_free_grocery_to_people_from_apl_category": {
+    "name": "In Kerala, free grocery to people from APL category | India News",
+    "description": "In Kerala, free grocery to people from APL category | India News\nThe Kerala government has started free distribution of grocery kits to families from the non-priority Above Poverty Line (APL) category as ...",
+    "benefit": "Free service/benefit",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "APL"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://indianexpress.com/article/india/in-kerala-free-grocery-to-people-from-apl-category-6416472/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:00:30.475320",
+    "missing_field_questions": {}
+  },
+  "pdf_career_advancement_scheme_cas_for_librarians_t": {
+    "name": "[PDF] Career Advancement Scheme (CAS) for Librarians The College ...",
+    "description": "[PDF] Career Advancement Scheme (CAS) for Librarians The College ...\nEligibility: 1) He/she has completed five years of service in that grade. 2) He/she has done any two of the following in the last five years: i)Training/Seminar ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "http://collegiateedu.kerala.gov.in/wp-content/uploads/2024/12/Instructions.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:01:34.756826",
+    "missing_field_questions": {}
+  },
+  "pdf_guidelinespdf_kscste_prathibha_scholarship": {
+    "name": "[PDF] GUIDELINES.pdf - KSCSTE | Prathibha Scholarship",
+    "description": "[PDF] GUIDELINES.pdf - KSCSTE | Prathibha Scholarship\n* Students of Kerala origin who have scored minimum 90% marks [80% for SC/ST]or equivalent grade in Higher Secondary Examination from Kerala(both in Overall and.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "is_student": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://prathibha.kscste.kerala.gov.in/images/downloads/GUIDELINES.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:01:34.756826",
+    "missing_field_questions": {}
+  },
+  "pdf_gortno30182024gad_datedthiruvananthapuram_0507": {
+    "name": "[PDF] G.O.(Rt)No.3018/2024/GAD Dated,Thiruvananthapuram, 05-07 ...",
+    "description": "[PDF] G.O.(Rt)No.3018/2024/GAD Dated,Thiruvananthapuram, 05-07 ...\nScheme - III : To provide annual financial assistance @ 8,000/- (Rupees eight. Thousand only) to 50 students/applicants for pursuing Coaching ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ],
+      "is_student": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://document.kerala.gov.in/documents/governmentorders//govtorder0607202415:13:46.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:27:07.438716",
+    "missing_field_questions": {}
+  },
+  "scheme_of_issuing_disability_certificate_social_ju": {
+    "name": "Scheme of Issuing Disability Certificate - Social Justice, Kerala",
+    "description": "Scheme of Issuing Disability Certificate - Social Justice, Kerala\nThe objective of the scheme is that all the disabled in Kerala shall be provided laminated disability certificate-cum-identity cards in the next two years.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "owns_4_wheeler": true,
+      "has_disability_cert": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Disability Certificate",
+      "Certificate"
+    ],
+    "application_portal": "https://sjd.kerala.gov.in/scheme-info.php?scheme_id=IDEwNg==",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:27:09.448486",
+    "missing_field_questions": {}
+  },
+  "directorate_of_women_and_child_development_wcd_ker": {
+    "name": "Directorate of Women and Child Development - WCD Kerala",
+    "description": "Directorate of Women and Child Development - WCD Kerala\nThe Scheme focuses on children in their early childhood of below 6 years and Strives to bring about their overall development focusing on the physical, psycho- ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://wcd.kerala.gov.in/officeprofile.php?keyid=MmRXOG5xUyN2eQ==",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:27:11.705071",
+    "missing_field_questions": {}
+  },
+  "kerala_ration_card_holders_get_one_month_to_apply_": {
+    "name": "Kerala ration card holders get one month to apply for BPL conversion",
+    "description": "Kerala ration card holders get one month to apply for BPL conversion\nKerala ration card holders can apply for conversion to the BPL (priority) category through Akshaya Centres. Check eligibility and process.",
+    "benefit": "Check official website",
+    "conditions": {
+      "annual_income_max": 100000,
+      "category_bpl": true,
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://english.mathrubhumi.com/news/kerala/kerala-ration-card-bpl-conversion-p46q5i2a",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:27:15.725165",
+    "missing_field_questions": {}
+  },
+  "karunya_arogya_suraksha_padhathi_kasp_government_o": {
+    "name": "Karunya Arogya Suraksha Padhathi (KASP) - Government of Kerala",
+    "description": "Karunya Arogya Suraksha Padhathi (KASP) - Government of Kerala\nThrough this scheme, medicines, tests and treatments are available free of charge from the government hospitals to all the beneficiaries irrespective of APL / ...",
+    "benefit": "Free service/benefit",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "APL",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sha.kerala.gov.in/?page_id=110&lang=en",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:27:15.725165",
+    "missing_field_questions": {}
+  },
+  "pdf_document_portal_government_of_kerala": {
+    "name": "[PDF] ഭരണഭാഷ - Document Portal -- Government of Kerala",
+    "description": "[PDF] ഭരണഭാഷ - Document Portal -- Government of Kerala\nSCHEME – 2024-25. Kerala State Welfare Corporation for Forward Communities ... The candidates shall after assessing their eligibility and suitability, as per ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://document.kerala.gov.in/documents/governmentorders/govtorder2910202409:40:17.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:56:55.514015",
+    "missing_field_questions": {}
+  },
+  "pdf_national_livestock_mission_entrepreneurship_de": {
+    "name": "[PDF] National Livestock Mission Entrepreneurship Development ...",
+    "description": "[PDF] National Livestock Mission Entrepreneurship Development ...\nEligible Entities: Individuals, Farmers Producer Organizations, Self Help Group, Joint Liability Group, Section 8 companies. Joint applications may also be ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://livestock.kerala.gov.in/wp-content/uploads/2024/07/KLDB-NLM-GUIDELINE.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:56:55.514015",
+    "missing_field_questions": {}
+  },
+  "pdf_government_of_kerala_2": {
+    "name": "[PDF] േകരള സർ ാാർ - Government of Kerala",
+    "description": "[PDF] േകരള സർ ാാർ - Government of Kerala\nCAMPUS INDUSTRIAL PARKS SCHEME - 2024. 1. Objectives. The Government ... Eligibility i. Educational institutions (Arts & Science Colleges ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://document.kerala.gov.in/documents/cabinetdecisions//cabinet2902202416:59:17.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:56:55.514015",
+    "missing_field_questions": {}
+  },
+  "social_security_system_govt_of_kerala_sevana_pensi": {
+    "name": "Social Security System, Govt. of Kerala - Sevana Pension",
+    "description": "Social Security System, Govt. of Kerala - Sevana Pension\nTotal Direct Benefit Transfer. 64,283.76 Cr. Total Transactions. 20.82 Cr. Total Beneficiaries. 5,119,437. Total Aadhar Seeded. 5,117,693.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "ST",
+        "General"
+      ],
+      "receives_other_pension": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Aadhaar"
+    ],
+    "application_portal": "https://welfarepension.lsgkerala.gov.in/index_en.aspx",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T13:57:01.311302",
+    "missing_field_questions": {}
+  },
+  "incentives_assistance_to_students": {
+    "name": "Incentives & Assistance to Students",
+    "description": "Incentives & Assistance to Students\nDuring 2024-25 around 450 students are expected to be assisted under the sub scheme. An outlay of ₹450.00 lakh is provide fot the subscheme during 2024-25. An ...",
+    "benefit": "₹450.00 lakh",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ],
+      "is_student": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://www.stdd.kerala.gov.in/index.php?option=com_sppagebuilder&view=page&id=54",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T14:33:56.876029",
+    "missing_field_questions": {}
+  },
+  "margin_money_grant_to_nano_units_invest_kerala": {
+    "name": "Margin Money Grant to Nano Units - Invest Kerala",
+    "description": "Margin Money Grant to Nano Units - Invest Kerala\nWomen, Youth (Age between 18 and 40), Differentially Abled Persons, Ex-Servicemen, and persons belonging to SC/ST category will be eligible for 10% additional ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://invest.kerala.gov.in/resources/schemes/margin-money-grant-to-nano-units/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T14:33:56.876029",
+    "missing_field_questions": {}
+  },
+  "pdf_terms_of_reference_tor_for_the_development_of_": {
+    "name": "[PDF] Terms of Reference (ToR) for the Development of the ... - sha",
+    "description": "[PDF] Terms of Reference (ToR) for the Development of the ... - sha\nEligibility. Only agencies empanelled by the Information and Public Relations Department,. Government of Kerala, vide G.O.(Ms)No.4/2024/I&PRD dated 20-02-2024, ...",
+    "benefit": "Check official website",
+    "conditions": {},
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://sha.kerala.gov.in/wp-content/uploads/2025/04/Terms-of-Reference-ToR-for-the-Development-of-the-Sruthitharangam-Scheme-Logo-1.pdf",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T14:33:56.876029",
+    "missing_field_questions": {}
+  },
+  "kerala_aswasakiranam_scheme": {
+    "name": "Kerala Aswasakiranam Scheme",
+    "description": "Kerala Aswasakiranam Scheme\nAccording to the Kerala Aswasakiranam Scheme, monthly financial assistance of Rs 600/- will be provided to caregivers who look after individuals ...",
+    "benefit": "assistance of Rs 600",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST"
+      ],
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://www.govtschemes.in/kerala-aswasakiranam-scheme",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T14:34:04.134795",
+    "missing_field_questions": {}
+  },
+  "how_to_change_apl_ration_card_to_bpl_kerala_nobrok": {
+    "name": "How to Change APL Ration Card to BPL Kerala? - NoBroker",
+    "description": "How to Change APL Ration Card to BPL Kerala? - NoBroker\nI have shared the step by step guide for how to change APL card to BPL. You should reach out to the local Civil Supplies Department or the Panchayat office of ...",
+    "benefit": "Check official website",
+    "conditions": {
+      "annual_income_max": 100000,
+      "category_in": [
+        "ST",
+        "BPL",
+        "APL"
+      ],
+      "owns_4_wheeler": true
+    },
+    "disqualifiers": [],
+    "documents_needed": [
+      "Ration Card"
+    ],
+    "application_portal": "https://www.nobroker.in/forum/how-to-change-apl-ration-card-to-bpl-kerala/",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T14:34:06.988435",
+    "missing_field_questions": {}
+  },
+  "msme_insurance_scheme_directorate_of_industries_an": {
+    "name": "MSME Insurance Scheme - Directorate of Industries and Commerce",
+    "description": "MSME Insurance Scheme - Directorate of Industries and Commerce\nThis scheme aims at providing financial protection to MSMEs against unforeseen risks, which can have a detrimental impact on their businesses.",
+    "benefit": "Check official website",
+    "conditions": {
+      "category_in": [
+        "SC",
+        "ST",
+        "General"
+      ]
+    },
+    "disqualifiers": [],
+    "documents_needed": [],
+    "application_portal": "https://industry.kerala.gov.in/index.php/schemes-mainmenu/msme-insurance-scheme",
+    "deadline": "Check official website",
+    "source": "Serper Search",
+    "scraped_at": "2026-04-08T14:51:53.671808",
+    "missing_field_questions": {}
+  }
+}

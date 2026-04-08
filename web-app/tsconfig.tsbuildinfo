@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/authscreen.tsx","./src/components/landingscreen.tsx","./src/components/mainapp.tsx","./src/context/authcontext.tsx","./src/services/api.ts","./src/types/speech.d.ts"],"version":"5.9.3"}

@@ -1,0 +1,355 @@
+{
+  "birth_certificate": {
+    "name": "Birth Certificate",
+    "description": "Official birth registration certificate from local registrar",
+    "subtypes": {
+      "newborn": {
+        "documents": ["Application form", "Hospital birth report", "Parent Aadhaar copies", "Parent ID proof", "Marriage certificate"],
+        "office": "Local Registrar of Births & Deaths / Village Office (Panchayat)",
+        "fee": "Free within 21 days, ₹5-25 after 21 days",
+        "timeline": "Same day to 7 days",
+        "portal_link": "https://keralaplus.kerala.gov.in/",
+        "online_available": true
+      },
+      "delayed": {
+        "documents": ["Application form", "Affidavit", "Newspaper announcement", "School leaving certificate", "Aadhaar copies"],
+        "office": "Sub-Registrar Office / District Registrar",
+        "fee": "₹50-200 + penalty",
+        "timeline": "7-30 days",
+        "portal_link": "https://keralaplus.kerala.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["birth certificate", "janma certificate", "child birth", "newborn registration"]
+  },
+  "death_certificate": {
+    "name": "Death Certificate",
+    "description": "Official death registration certificate",
+    "subtypes": {
+      "default": {
+        "documents": ["Application form", "Hospital death report", "Cause of death certificate", "Deceased Aadhaar"],
+        "office": "Local Registrar of Deaths / Village Office",
+        "fee": "Free within 21 days, ₹5-25 after",
+        "timeline": "Same day to 7 days",
+        "portal_link": "https://keralaplus.kerala.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["death certificate", "marana certificate", "death registration"]
+  },
+  "ration_card": {
+    "name": "Ration Card",
+    "description": "Public Distribution System card for subsidized food grains",
+    "subtypes": {
+      "new": {
+        "documents": ["Application form", "Aadhaar of all family members", "Bank passbook", "Recent photo", "Address proof", "Income certificate"],
+        "office": "Civil Supplies Office / Taluk Supply Office",
+        "fee": "Free",
+        "timeline": "30-60 days",
+        "portal_link": "https://ecitizen.gov.in/ecitizen/",
+        "online_available": true
+      },
+      "renewal": {
+        "documents": ["Existing ration card", "Aadhaar updates", "Family changes proof"],
+        "office": "Civil Supplies Office",
+        "fee": "Free",
+        "timeline": "7-15 days",
+        "portal_link": "https://ecitizen.gov.in/ecitizen/",
+        "online_available": true
+      },
+      "bpl": {
+        "documents": ["BPL certificate", "Income certificate", "Aadhaar", "Family photos", "Bank account"],
+        "office": "Civil Supplies Office",
+        "fee": "Free",
+        "timeline": "30-45 days",
+        "portal_link": "https://ecitizen.gov.in/ecitizen/",
+        "online_available": true
+      },
+      "apl": {
+        "documents": ["Income certificate", "Aadhaar", "Address proof", "Existing card if any"],
+        "office": "Civil Supplies Office",
+        "fee": "₹25-50",
+        "timeline": "15-30 days",
+        "portal_link": "https://ecitizen.gov.in/ecitizen/",
+        "online_available": true
+      }
+    },
+    "keywords": ["ration card", "PDS card", "food grain card", "annadata card"]
+  },
+  "bpl_certificate": {
+    "name": "BPL Certificate",
+    "description": "Below Poverty Line certificate for welfare schemes",
+    "subtypes": {
+      "default": {
+        "documents": ["Application form", "Income certificate", "Family details", "Aadhaar", "Address proof", "Photo"],
+        "office": "Village Office / Panchayat Office",
+        "fee": "Free",
+        "timeline": "7-15 days",
+        "portal_link": "https://villageoffice.kerala.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["bpl certificate", "below poverty line", "bpl card", "poverty certificate"]
+  },
+  "caste_certificate": {
+    "name": "Caste Certificate",
+    "description": "Official certificate for caste/community verification",
+    "subtypes": {
+      "sc": {
+        "documents": ["Application form", "Caste verification form", "Parent's caste certificate", "Aadhaar", "Address proof", "Photo", "School records if applicable"],
+        "office": "Village Office / Tahsildar Office",
+        "fee": "Free",
+        "timeline": "15-30 days",
+        "portal_link": "https://villageoffice.kerala.gov.in/",
+        "online_available": true
+      },
+      "st": {
+        "documents": ["Application form", "Tribe verification", "Parent's ST certificate", "Aadhaar", "Address proof", "Photo", "Community certificate"],
+        "office": "Village Office / Tribal Extension Officer",
+        "fee": "Free",
+        "timeline": "15-30 days",
+        "portal_link": "https://villageoffice.kerala.gov.in/",
+        "online_available": true
+      },
+      "obc": {
+        "documents": ["Application form", "Community certificate", "Income certificate", "Aadhaar", "Parent's OBC certificate"],
+        "office": "Village Office / Tahsildar",
+        "fee": "₹25-50",
+        "timeline": "15-30 days",
+        "portal_link": "https://villageoffice.kerala.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["caste certificate", "community certificate", "SC certificate", "ST certificate", "OBC certificate"]
+  },
+  "income_certificate": {
+    "name": "Income Certificate",
+    "description": "Official certificate of annual family income",
+    "subtypes": {
+      "default": {
+        "documents": ["Application form", "Income proof (salary slips/ITR)", "Aadhaar", "Address proof", "Family details", "Employer certificate if employed"],
+        "office": "Village Office / Revenue Inspector",
+        "fee": "₹25-50",
+        "timeline": "7-15 days",
+        "portal_link": "https://villageoffice.kerala.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["income certificate", "income proof", "salary certificate", "annual income"]
+  },
+  "land_mutation": {
+    "name": "Land/Property Mutation",
+    "description": "Transfer of property ownership in land records",
+    "subtypes": {
+      "inheritance": {
+        "documents": ["Application form", "Death certificate of previous owner", "Will/settlement deed", "Legal heir certificate", "Property documents", "Tax receipt", "Aadhaar"],
+        "office": "Sub-Registrar Office / Village Office",
+        "fee": "₹100-500 + registration fee",
+        "timeline": "30-90 days",
+        "portal_link": "https://erevenue.kerala.gov.in/",
+        "online_available": true
+      },
+      "sale": {
+        "documents": ["Sale deed", "EC (Encumbrance Certificate)", "Title deed", "Tax receipt", "Aadhaar of buyer and seller", "Passport photos"],
+        "office": "Sub-Registrar Office",
+        "fee": "Registration fee (1-5% of value) + stamp duty",
+        "timeline": "7-30 days",
+        "portal_link": "https://erevenue.kerala.gov.in/",
+        "online_available": true
+      },
+      "gift": {
+        "documents": ["Gift deed", "Relationship proof", "Property documents", "Tax receipt", "Aadhaar"],
+        "office": "Sub-Registrar Office",
+        "fee": "Registration fee + stamp duty",
+        "timeline": "7-30 days",
+        "portal_link": "https://erevenue.kerala.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["land mutation", "property transfer", "name change", "khata transfer", "register"]
+  },
+  "property_tax": {
+    "name": "Property Tax",
+    "description": "Municipal/property tax assessment and payment",
+    "subtypes": {
+      "assessment": {
+        "documents": ["Building permit", "Ownership documents", "Aadhaar", "Previous tax receipts", "Property details"],
+        "office": "Local Municipal Office / Corporation",
+        "fee": "Based on plinth area and location",
+        "timeline": "Immediate to 15 days",
+        "portal_link": "https://keralamunicipality.gov.in/",
+        "online_available": true
+      },
+      "payment": {
+        "documents": ["Previous tax receipts", "Property ID", "Aadhaar"],
+        "office": "Municipal Office / Online portal",
+        "fee": "As per tax assessment",
+        "timeline": "Immediate",
+        "portal_link": "https://keralamunicipality.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["property tax", "building tax", "house tax", "municipal tax"]
+  },
+  "building_permit": {
+    "name": "Building Permit",
+    "description": "Permission to construct or modify building",
+    "subtypes": {
+      "new_building": {
+        "documents": ["Application form", "Building plan (2 copies)", "Land documents", "Tax receipt", "Aadhaar", "Photo", "NOC from neighbors if required"],
+        "office": "Local Planning Authority / Municipality / Corporation",
+        "fee": "Based on plinth area and floor count",
+        "timeline": "30-60 days",
+        "portal_link": "https://lsgkerala.gov.in/",
+        "online_available": true
+      },
+      "renovation": {
+        "documents": ["Application form", "Existing permit", "Renovation plan", "Ownership proof", "Aadhaar"],
+        "office": "Local Planning Authority",
+        "fee": "Lower than new building",
+        "timeline": "15-30 days",
+        "portal_link": "https://lsgkerala.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["building permit", "building plan approval", "construction permission", "layout approval"]
+  },
+  "fssai_license": {
+    "name": "FSSAI License",
+    "description": "Food Safety and Standards Authority of India license for food business",
+    "subtypes": {
+      "basic": {
+        "documents": ["Application form", "Photo ID", "Address proof", "Food safety plan", "List of food categories", "Bank details"],
+        "office": "FSSAI Regional Office / Online",
+        "fee": "₹100/year (turnover below ₹12 lakh)",
+        "timeline": "7-30 days",
+        "portal_link": "https://foscos.fssai.gov.in/",
+        "online_available": true
+      },
+      "state": {
+        "documents": ["Application form", "Building layout", "Food safety plan", "Equipment list", "Lab report", "Import code if applicable"],
+        "office": "FSSAI State Office",
+        "fee": "₹2,000-5,000/year (₹12 lakh to ₹20 crore turnover)",
+        "timeline": "30-60 days",
+        "portal_link": "https://foscos.fssai.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["fssai", "food license", "food safety", "foscos", "food business license"]
+  },
+  "trade_license": {
+    "name": "Trade License",
+    "description": "License to conduct business in municipal area",
+    "subtypes": {
+      "new": {
+        "documents": ["Application form", "Shop establishment proof", "Aadhaar", "Address proof", "Photo", "GST registration if applicable", "Rental agreement if rented premises"],
+        "office": "Municipal Office / Corporation",
+        "fee": "₹500-2,000 (varies by business type)",
+        "timeline": "7-15 days",
+        "portal_link": "https://keralamunicipality.gov.in/",
+        "online_available": true
+      },
+      "renewal": {
+        "documents": ["Previous license", "Updated documents if changed"],
+        "office": "Municipal Office",
+        "fee": "₹500-1,000",
+        "timeline": "3-7 days",
+        "portal_link": "https://keralamunicipality.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["trade license", "shop license", "business license", "establishment certificate"]
+  },
+  "gst_registration": {
+    "name": "GST Registration",
+    "description": "Goods and Services Tax registration for businesses",
+    "subtypes": {
+      "new": {
+        "documents": ["PAN card", "Aadhaar", "Bank account proof", "Business address proof", "Photo", "Business incorporation documents if company"],
+        "office": "GST Portal (Central) / Chartered Accountant",
+        "fee": "Free (₹100 processing fee if through agent)",
+        "timeline": "3-7 days (if no verification needed)",
+        "portal_link": "https://www.gst.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["gst", "gstin", "goods and services tax", "tax registration"]
+  },
+  "driving_license": {
+    "name": "Driving License",
+    "description": "License to drive motor vehicles",
+    "subtypes": {
+      "learning": {
+        "documents": ["Application form", "Aadhaar", "Age proof", "Address proof", "Medical certificate if age 40+", "Photo"],
+        "office": "RTO (Regional Transport Office)",
+        "fee": "₹300-500",
+        "timeline": "Same day to 7 days",
+        "portal_link": "https://parivahan.gov.in/",
+        "online_available": true
+      },
+      "permanent": {
+        "documents": ["Learning license", "Application form", "Aadhaar", "Passport photos", "Driving test certificate", "Fee receipt"],
+        "office": "RTO",
+        "fee": "₹200-500",
+        "timeline": "7-30 days after test",
+        "portal_link": "https://parivahan.gov.in/",
+        "online_available": true
+      },
+      "renewal": {
+        "documents": ["Existing license", "Application form", "Aadhaar", "Medical certificate if age 40+"],
+        "office": "RTO",
+        "fee": "₹200-500",
+        "timeline": "Same day to 7 days",
+        "portal_link": "https://parivahan.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["driving license", "dl", "vehicle license", "learner's license", "license renewal"]
+  },
+  "vehicle_registration": {
+    "name": "Vehicle Registration",
+    "description": "Registration of new or transferred vehicles",
+    "subtypes": {
+      "new": {
+        "documents": ["Application form", "Sale certificate", "Insurance certificate", "Road tax receipt", "Aadhaar", "Address proof", "Photo", "Form 20"],
+        "office": "RTO",
+        "fee": "Road tax + registration fee (varies by vehicle type)",
+        "timeline": "Same day to 7 days",
+        "portal_link": "https://parivahan.gov.in/",
+        "online_available": true
+      },
+      "transfer": {
+        "documents": ["Registration certificate", "Transfer form", "NOC from previous owner if different state", "Insurance", "Aadhaar of both parties", "Tax clearance"],
+        "office": "RTO",
+        "fee": "₹500-1,500 + tax",
+        "timeline": "7-15 days",
+        "portal_link": "https://parivahan.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["vehicle registration", "rc book", "car registration", "bike registration", "rc transfer"]
+  },
+  "employment_exchange": {
+    "name": "Employment Exchange Registration",
+    "description": "Registration with government employment exchange for job assistance",
+    "subtypes": {
+      "registration": {
+        "documents": ["Application form", "Aadhaar", "Educational certificates", "Photo", "Age proof", "Address proof", "Category certificate if applicable"],
+        "office": "District Employment Exchange / Taluk Employment Exchange",
+        "fee": "Free",
+        "timeline": "Same day",
+        "portal_link": "https://employment.kerala.gov.in/",
+        "online_available": true
+      },
+      "renewal": {
+        "documents": ["Previous registration card", "Updated qualifications", "Aadhaar"],
+        "office": "Employment Exchange",
+        "fee": "Free",
+        "timeline": "Same day",
+        "portal_link": "https://employment.kerala.gov.in/",
+        "online_available": true
+      }
+    },
+    "keywords": ["employment exchange", "job card", "job registration", "career center", "placement"]
+  }
+}
