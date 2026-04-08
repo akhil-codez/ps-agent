@@ -1215,6 +1215,18 @@ Backend receives `is_first` parameter and adjusts prompt accordingly.
 
 | Date | Change | Files Modified |
 |------|--------|----------------|
+| 2026-04-08 | ✅ FULLY DEPLOYED SYSTEM | All components |
+| 2026-04-08 | Added google-generativeai and groq to requirements | requirements.txt |
+| 2026-04-08 | Added diagnostic logging to LLM provider | llm_provider.py |
+| 2026-04-08 | Added LLM provider lazy-loading (fixes startup issue) | agent.py |
+| 2026-04-08 | Fixed PostgreSQL RealDictCursor connection | database.py |
+| 2026-04-08 | Fixed CORS for Vercel frontend | main.py |
+| 2026-04-08 | Implemented WhatsApp webhook handler | whatsapp.py |
+| 2026-04-08 | Implemented notifier with scheme matching | notifier.py |
+| 2026-04-08 | Added notification_scheduler for scheme scraping | notification_scheduler.py |
+| 2026-04-08 | Added GitHub Actions for daily notifications | .github/workflows/notifications.yml |
+| 2026-04-08 | Added render.yaml for Render deployment | render.yaml |
+| 2026-04-08 | Added vercel.json for Vercel rewrites | web-app/vercel.json |
 | 2026-04-08 | Added Landing → Auth navigation flow | App.tsx, LandingScreen.tsx, MainApp.tsx |
 | 2026-04-08 | Added multi-conversation chat storage | api.ts, MainApp.tsx |
 | 2026-04-08 | Added first message greeting control | agent.py, main.py, api.ts, MainApp.tsx |
@@ -1254,22 +1266,127 @@ streamlit run app.py
 
 To resume work in a new conversation:
 
-1. Read README.md Implementation Summary section
-2. Check Session History at end of README
-3. Run backend: `python main.py`
-4. Run frontend: `cd web-app && npm run dev`
-5. Test at http://localhost:5173 (or port shown)
+1. Read README.md - Project Status Summary section
+2. Check Recent Changes (Changelog) section
+3. Review current architecture in Architecture section
+4. Check Environment Variables section for deployment config
+5. Run backend: `python main.py`
+6. Run frontend: `cd web-app && npm run dev`
+7. Test at http://localhost:5173 (or port shown)
 
 ---
 
-## Phase 2: Proactive Notifier 🔲 PENDING
+## Phase 2: Proactive Notifier ✅ COMPLETED
 
 | Component | Status | Notes |
 |-----------|--------|-------|
 | Architecture | ✅ | Designed |
-| Playwright Scraper | 🔲 | Pending |
-| WhatsApp Integration | 🔲 | Pending |
-| Scheme Watcher | 🔲 | Pending |
+| Scheme Scraper | ✅ | scheme_scraper.py - SJD, WCD, egrantz, Serper search |
+| WhatsApp Integration | ✅ | Twilio webhook implemented |
+| Notification Scheduler | ✅ | notification_scheduler.py |
+| GitHub Actions | ✅ | Daily 8 AM & 3:15 PM IST |
+| Database | ✅ | PostgreSQL on Neon.tech |
+| Render Deployment | ✅ | Auto-deploys on GitHub push |
+| Vercel Frontend | ✅ | https://ps-agent.vercel.app |
+
+### Deployment URLs
+
+| Service | URL |
+|---------|-----|
+| Frontend | https://ps-agent.vercel.app |
+| Backend API | https://ps-agent-api.onrender.com |
+| Database | Neon.tech (PostgreSQL - neondb) |
+| WhatsApp Webhook | https://ps-agent-api.onrender.com/webhook/whatsapp |
+| GitHub Actions | Scheduled notifications |
+
+---
+
+## Project Status Summary (As of 2026-04-08)
+
+### ✅ FULLY OPERATIONAL SYSTEM
+
+| Component | Deployment | Status |
+|-----------|------------|--------|
+| Frontend | Vercel | ✅ Running |
+| Backend API | Render | ✅ Running |
+| Database | Neon.tech (PostgreSQL) | ✅ Connected |
+| WhatsApp | Twilio | ✅ Configured |
+| Scheduled Notifications | GitHub Actions | ✅ Active |
+
+### System Architecture
+
+```
+User (WhatsApp/Web)
+       │
+       ├── WhatsApp → Twilio → Render Backend → Neon DB
+       │
+       └── Web (Vercel) → Render Backend → Neon DB
+       
+Scheduled Notifications (Daily):
+GitHub Actions → Render Backend → Twilio → User WhatsApp
+```
+
+### Key Files
+
+| File | Purpose |
+|------|---------|
+| main.py | FastAPI endpoints |
+| agent.py | Chat agent with LLM (lazy-loaded) |
+| llm_provider.py | Gemini + Groq LLM provider |
+| notifier.py | WhatsApp notification sender |
+| notification_scheduler.py | Scheme scraping & eligibility |
+| database.py | PostgreSQL + SQLite (dual support) |
+| auth.py | User registration/login |
+| whatsapp.py | Twilio webhook handler |
+| cron_notify.py | GitHub Actions entry point |
+
+### Environment Variables (Deployed)
+
+| Variable | Where Set | Purpose |
+|----------|-----------|---------|
+| DATABASE_URL | Render, GitHub Actions | Neon PostgreSQL connection |
+| GEMINI_API_KEY | Render, GitHub Actions | Primary LLM |
+| GROQ_API_KEY | Render, GitHub Actions | Fallback LLM |
+| SERPER_API_KEY | Render, GitHub Actions | Search for schemes |
+| TWILIO_ACCOUNT_SID | Render | WhatsApp sender |
+| TWILIO_AUTH_TOKEN | Render | WhatsApp auth |
+| TWILIO_WHATSAPP_FROM | Render | WhatsApp number |
+
+### Critical Code Patterns (IMPORTANT)
+
+1. **LLM Lazy Loading** (agent.py line 17):
+   - DO NOT initialize LLM at module import
+   - Use `get_llm_provider()` inside functions
+
+2. **Database Cursor** (database.py):
+   - Use `get_cursor()` context manager
+   - Use `RealDictCursor` for PostgreSQL (NOT row_factory lambda)
+
+3. **API Keys** (llm_provider.py):
+   - Read via `os.getenv()`
+   - Keys in Render env vars, not .env
+   - Local .env only for development
+
+4. **LLM Packages Required** (requirements.txt):
+   - `google-generativeai>=0.3.0`
+   - `groq>=0.4.0`
+
+### Deployment Notes
+
+- Render deploys automatically on GitHub push
+- GitHub Actions deploys notifications daily at 8 AM & 3:15 PM IST
+- Vercel deploys automatically on GitHub push
+- Twilio webhook: https://ps-agent-api.onrender.com/webhook/whatsapp
+- Groq is used as fallback (Gemini blocked in India)
+
+### Known Issues & Solutions
+
+| Issue | Solution |
+|-------|----------|
+| "No LLM provider" error | Add google-generativeai, groq to requirements.txt |
+| "connection already closed" | Use RealDictCursor in database.py |
+| Gemini blocked in India | Use Groq as fallback (working) |
+| Render cold start | Normal for free tier - first request takes 30-60s |
 
 ---
 
