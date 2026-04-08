@@ -238,11 +238,18 @@ def login_user(phone: str, password: str) -> dict:
             'error': 'Phone number not registered'
         }
     
-    conn = database.get_db_connection()
-    c = conn.cursor()
-    c.execute('SELECT password_hash FROM users WHERE phone = ?', (phone,))
-    row = c.fetchone()
-    conn.close()
+    with database.get_cursor() as c:
+        if database.USE_POSTGRES:
+            c.execute('SELECT password_hash FROM users WHERE phone = %s', (phone,))
+        else:
+            c.execute('SELECT password_hash FROM users WHERE phone = ?', (phone,))
+        row = c.fetchone()
+    
+    if not row:
+        return {
+            'success': False,
+            'error': 'User not found'
+        }
     
     if not verify_password(password, row['password_hash']):
         return {
