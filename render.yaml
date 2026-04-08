@@ -23,3 +23,44 @@ services:
         sync: false
       - key: TWILIO_WHATSAPP_FROM
         sync: false
+
+cron:
+  - name: morning-notifications
+    schedule: "30 2 * * *"
+    command: python cron_notify.py
+    maxRetries: 3
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: SERPER_API_KEY
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_WHATSAPP_FROM
+        sync: false
+
+  - name: afternoon-notifications
+    schedule: "45 9 * * *"
+    command: python cron_notify.py
+    maxRetries: 3
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: SERPER_API_KEY
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_WHATSAPP_FROM
+        sync: false
