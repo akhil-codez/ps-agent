@@ -14,8 +14,6 @@ from llm_provider import get_llm_provider
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-llm = get_llm_provider()
-
 def clean_agent_response(text: str) -> str:
     text = re.sub(r'\(save_eligibility_answer:.*?\)', '', text)
     text = re.sub(r'\(recheck_eligibility:.*?\)', '', text)
@@ -211,7 +209,7 @@ User Question: {message}
 Provide a helpful, structured response with relevant government service information.
 '''
         
-        response_text = llm.generate(full_prompt, language=user_lang)
+        response_text = get_llm_provider().generate(full_prompt, language=user_lang)
         
         if '```json' in response_text:
             try:
@@ -234,7 +232,7 @@ Provide a helpful, structured response with relevant government service informat
                                 response_text = result
                         else:
                             full_prompt += f"\n\n[Function Result]: {result}\n\nBased on this information, provide your final response:"
-                            response_text = llm.generate(full_prompt, language=user_lang)
+                            response_text = get_llm_provider().generate(full_prompt, language=user_lang)
             except:
                 pass
         
@@ -275,7 +273,7 @@ User Question: {message}
 Provide a helpful, structured response with relevant government service information.
 '''
         
-        response_text = llm.generate(full_prompt, language=user_lang)
+        response_text = get_llm_provider().generate(full_prompt, language=user_lang)
         
         if user_lang == 'malayalam' and not any('\u0d15' <= c <= '\u0d46' for c in response_text[:100]):
             try:
@@ -296,7 +294,7 @@ if __name__ == "__main__":
     print()
     
     # Show LLM provider status
-    status = llm.get_status()
+    status = get_llm_provider().get_status()
     print("LLM Provider Status:")
     gemini_status = "[OK]" if status['gemini']['configured'] else "[X]"
     groq_status = "[OK]" if status['groq']['configured'] else "[X]"
