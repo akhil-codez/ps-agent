@@ -37,6 +37,8 @@ export default function AuthScreen() {
     language: 'malayalam'
   });
   const [signupError, setSignupError] = useState<string | null>(null);
+  const [isSignupLoading, setIsSignupLoading] = useState(false);
+  const [isLoginLoading, setIsLoginLoading] = useState(false);
 
   const handleLogin = async () => {
     if (!loginPhone || !loginPassword) {
@@ -44,9 +46,14 @@ export default function AuthScreen() {
       return;
     }
     setLoginError(null);
-    const result = await login(loginPhone, loginPassword);
-    if (!result.success) {
-      setLoginError(result.error || 'Login failed');
+    setIsLoginLoading(true);
+    try {
+      const result = await login(loginPhone, loginPassword);
+      if (!result.success) {
+        setLoginError(result.error || 'Login failed');
+      }
+    } finally {
+      setIsLoginLoading(false);
     }
   };
 
@@ -57,23 +64,28 @@ export default function AuthScreen() {
       return;
     }
     setSignupError(null);
+    setIsSignupLoading(true);
     
-    const result = await register({
-      name,
-      phone,
-      password,
-      district,
-      category,
-      income: parseInt(income),
-      age: parseInt(age),
-      family_size: parseInt(family_size),
-      language: signupData.language
-    });
-    
-    if (result.success) {
-      await login(phone, password);
-    } else {
-      setSignupError(result.errors?.join(', ') || 'Registration failed');
+    try {
+      const result = await register({
+        name,
+        phone,
+        password,
+        district,
+        category,
+        income: parseInt(income),
+        age: parseInt(age),
+        family_size: parseInt(family_size),
+        language: signupData.language
+      });
+      
+      if (result.success) {
+        await login(phone, password);
+      } else {
+        setSignupError(result.errors?.join(', ') || 'Registration failed');
+      }
+    } finally {
+      setIsSignupLoading(false);
     }
   };
 
@@ -159,11 +171,11 @@ export default function AuthScreen() {
 
                   <button 
                     onClick={handleLogin}
-                    disabled={isLoading}
+                    disabled={isLoginLoading}
                     className="w-full flex items-center justify-center gap-2 bg-brand hover:bg-brand/90 hover:shadow-[0_0_15px_rgba(10,86,53,0.4)] text-[#f0f0ee] transition-all duration-300 py-3 rounded-[10px] font-medium mt-6 disabled:opacity-50"
                   >
-                    {isLoading ? <Loader2 size={18} className="animate-spin" /> : 'Sign in'}
-                    {!isLoading && <ArrowRight size={18} />}
+                    {isLoginLoading ? <Loader2 size={18} className="animate-spin" /> : 'Sign in'}
+                    {!isLoginLoading && <ArrowRight size={18} />}
                   </button>
 
                   <div className="mt-6 text-center text-sm text-muted">
@@ -311,11 +323,11 @@ export default function AuthScreen() {
                   <div className="mt-4 pt-3 border-t border-subtle">
                     <button 
                       onClick={handleSignup}
-                      disabled={isLoading}
+                      disabled={isSignupLoading}
                       className="w-full flex items-center justify-center gap-2 bg-brand hover:bg-brand/90 hover:-translate-y-0.5 text-[#f0f0ee] transition-all duration-300 py-3 rounded-[10px] font-medium shadow-[0_4px_14px_rgba(10,86,53,0.3)] disabled:opacity-50"
                     >
-                      {isLoading ? <Loader2 size={18} className="animate-spin" /> : 'Create account'}
-                      {!isLoading && <ArrowRight size={18} />}
+                      {isSignupLoading ? <Loader2 size={18} className="animate-spin" /> : 'Create account'}
+                      {!isSignupLoading && <ArrowRight size={18} />}
                     </button>
                     
                     <p className="text-center text-[10px] text-muted mt-2">
