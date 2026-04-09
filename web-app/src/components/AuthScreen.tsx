@@ -18,7 +18,7 @@ const DISTRICTS = [
 const CATEGORIES = ['General', 'OBC', 'SC', 'ST'];
 
 export default function AuthScreen() {
-  const { login, isLoading } = useAuth();
+  const { login } = useAuth();
   const [view, setView] = useState<'login' | 'signup'>('login');
   
   const [loginPhone, setLoginPhone] = useState('');
